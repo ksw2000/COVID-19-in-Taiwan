@@ -2,7 +2,7 @@
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 
-fetch('/dataset.json')
+fetch('dataset.json')
 .then(function (response) {
     return response.json();
 })
