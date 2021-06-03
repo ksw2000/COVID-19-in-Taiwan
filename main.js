@@ -11,6 +11,7 @@ fetch('dataset.json')
     let values = [];
     let backlog = [];
     let death = [];
+    let backlogCounter = {};
     Object.keys(data).forEach(key => {
         labels.push(key);
         values.push(data[key]['本土']);
@@ -18,6 +19,11 @@ fetch('dataset.json')
         if (data[key]['校正回歸']){
             let sum = 0;
             Object.keys(data[key]['校正回歸']).forEach((key2)=>{
+                if (typeof backlogCounter[key2] === 'undefined'){
+                   backlogCounter[key2] = data[key]['校正回歸'][key2];
+                } else {
+                   backlogCounter[key2] += data[key]['校正回歸'][key2];
+                }
                 sum += data[key]['校正回歸'][key2];
             });
             backlog.push(sum);
@@ -25,7 +31,7 @@ fetch('dataset.json')
             backlog.push(0);
         }
     });
-    const ctx = document.getElementById('myChart').getContext('2d');
+
     const footer = (tooltipItems)=>{
         let sum = 0;
         tooltipItems.forEach((tooltipItem)=>{
@@ -34,19 +40,19 @@ fetch('dataset.json')
         let d = death[tooltipItems[0].parsed.x];
         return `ㄗㄨㄥˇㄏㄜˊ: ${sum}\nㄙˇㄨㄤˊ: ${d}`;
     }
-    const myChart = new Chart(ctx, {
+    const myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
         type: 'bar',
         data: {
             labels: labels, 
             datasets: [{
                 label: 'ㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟㄑㄧㄢˊ',
                 data: values,
-                backgroundColor: 'rgba(115, 115, 115, 0.2)',
+                backgroundColor: 'rgba(0, 166, 255, 0.8)',
                 borderWidth: 1
             },{
                 label: 'ㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟ',
                 data: backlog,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                backgroundColor: 'rgba(138, 192, 222, 0.8)',
             }]
         },
         options: {
@@ -69,6 +75,87 @@ fetch('dataset.json')
                 tooltip: {
                     callbacks: {
                         footer: footer,
+                    }
+                }
+            }
+        }
+    });
+
+    const myChartDeath = new Chart(document.getElementById('myChartDeath').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'ㄙˇㄨㄤˊㄖㄣˊㄕㄨˋ',
+                data: death,
+                backgroundColor: 'rgba(115, 115, 115, 0.8)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    stacked: true,
+                },
+                y: {
+                    stacked: true,
+                    beginAtZero: true,
+                    min: 0,
+                    max: 30,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+
+
+    // backlogCounterToList
+    let backgroundColorList = [];
+    Object.keys(data).forEach(key => {
+        if (typeof backlogCounter[key] === 'undefined') {
+            backgroundColorList.push(0);
+        } else {
+            backgroundColorList.push(backlogCounter[key]);
+        }
+    });
+
+    const footerSingleDay = (tooltipItems) => {
+        let x = tooltipItems[0].dataIndex;
+        let sum = values[x] + backgroundColorList[x]
+        return `ㄏㄜˊㄐ一ˋ : ${sum}`;
+    }
+    const myChartSingleDay = new Chart(document.getElementById('myChartSingleDay').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'ㄉㄤㄖˋㄑㄩㄝˋㄓㄣˇ',
+                data: values,
+                backgroundColor: 'rgba(255, 142, 71, 0.8)',
+                borderWidth: 1
+            }, {
+                label: 'ㄉㄤㄖˋㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟ',
+                data: backgroundColorList,
+                backgroundColor: 'rgba(255, 232, 138, 0.8)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    stacked: true,
+                },
+                y: {
+                    stacked: true,
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        footer: footerSingleDay,
                     }
                 }
             }

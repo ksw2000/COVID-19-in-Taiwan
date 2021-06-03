@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css?20210603">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-    <script src="main.js?" defer></script>
+    <script src="main.js?20210603" defer></script>
   </head>
   <body>
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
@@ -31,7 +31,21 @@
     </header>
     <!------------------------------------------>
     <main class="mdc-top-app-bar--fixed-adjust routing-content">
-      <canvas id="myChart"></canvas>
+      <h2>ㄗㄨㄟˋㄐㄧㄣˋㄅㄣˇㄊㄨˇㄑㄩㄝˋㄓㄣˇㄕㄨˋ</h2>
+      <div class="hori-scroll">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <h2>ㄗㄨㄟˋㄐㄧㄣˋㄅㄣˇㄊㄨˇㄙˇㄨㄤˊㄕㄨˋ</h2>
+      <div class="hori-scroll">
+        <canvas id="myChartDeath"></canvas>
+      </div>
+
+      <h2>ㄉㄢㄖˋㄈㄚㄅㄨˋㄑㄩㄝˋㄓㄣˇㄕㄨˋ</h2>
+      <p>ㄇㄟˇㄖˋㄈㄚㄅㄨˋㄉㄧˊㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟㄐㄧㄚㄕㄤˋㄉㄤㄖˋㄙㄨㄛˇㄑㄩㄝˋㄓㄣˇㄕㄨˋ</p>
+      <div class="hori-scroll">
+        <canvas id="myChartSingleDay"></canvas>
+      </div>
     </main>
     </body>
 </html>
