@@ -4,17 +4,24 @@ body{
 }
 
 main{
-    display: block;
-    margin: 0px auto;
-    max-width: 1200;
-    width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin: 0px auto;
+  max-width: 800px;
+  padding:10px 20px;
+  width: 100%;
 }
 
 canvas{
     height: 250px;
     margin: 0px auto;
-    max-width: 800px;
     width: 100%;
+}
+
+.hori-scroll{
+  width: 100%;
+  overflow-y: auto;
+  direction: rtl;
 }
 
 :root{
