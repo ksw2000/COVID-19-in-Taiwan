@@ -47,12 +47,11 @@ fetch('dataset.json')
             datasets: [{
                 label: 'ㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟㄑㄧㄢˊ',
                 data: values,
-                backgroundColor: 'rgba(0, 166, 255, 0.8)',
-                borderWidth: 1
+                backgroundColor: 'rgba(0, 166, 255, 0.8)'
             },{
                 label: 'ㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟ',
                 data: backlog,
-                backgroundColor: 'rgba(138, 192, 222, 0.8)',
+                backgroundColor: 'rgba(138, 192, 222, 0.8)'
             }]
         },
         options: {
@@ -88,8 +87,7 @@ fetch('dataset.json')
             datasets: [{
                 label: 'ㄙˇㄨㄤˊㄖㄣˊㄕㄨˋ',
                 data: death,
-                backgroundColor: 'rgba(115, 115, 115, 0.8)',
-                borderWidth: 1
+                backgroundColor: 'rgba(115, 115, 115, 0.8)'
             }]
         },
         options: {
@@ -133,13 +131,11 @@ fetch('dataset.json')
             datasets: [{
                 label: 'ㄉㄤㄖˋㄑㄩㄝˋㄓㄣˇ',
                 data: values,
-                backgroundColor: 'rgba(255, 142, 71, 0.8)',
-                borderWidth: 1
+                backgroundColor: 'rgba(255, 142, 71, 0.8)'
             }, {
                 label: 'ㄉㄤㄖˋㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟ',
                 data: backgroundColorList,
-                backgroundColor: 'rgba(255, 232, 138, 0.8)',
-                borderWidth: 1
+                backgroundColor: 'rgba(255, 232, 138, 0.8)'
             }]
         },
         options: {
