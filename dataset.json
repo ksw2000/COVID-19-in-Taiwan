@@ -79,7 +79,8 @@
             "5-25": 34,
             "5-26": 16,
             "5-27": 4,
-            "5-28": 3
+            "5-28": 3,
+            "6-3": 2
         },
         "備註": ["雙北宣布停課"],
         "url": [
@@ -98,7 +99,8 @@
             "5-26": 23,
             "5-27": 10,
             "5-28": 7,
-            "5-31": 1
+            "5-31": 1,
+            "6-3": 1
         },
         "備註": [],
         "url": [
@@ -116,7 +118,8 @@
             "5-25": 37,
             "5-26": 36,
             "5-27": 14,
-            "5-28": 7
+            "5-28": 7,
+            "6-2": 2
         },
         "備註": ["全台進入第三級防疫警戒"],
         "url":[
@@ -153,7 +156,9 @@
             "5-25": 17,
             "5-26": 9,
             "5-27": 7,
-            "5-28": 6
+            "5-28": 6,
+            "6-2": 6,
+            "6-3": 2
         },
         "url":[
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=-cxOeHRhcVf1aXh8L3E7DA"
@@ -190,7 +195,8 @@
             "5-28": 22,
             "5-29": 11,
             "5-31": 1,
-            "6-1": 1
+            "6-1": 1,
+            "6-2": 1
         },
         "url":[
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=zpyeez9DR02hYPPArtt0jg",
@@ -226,7 +232,9 @@
             "5-27": 54,
             "5-28": 36,
             "5-29": 19,
-            "5-30": 10
+            "5-30": 10,
+            "6-2": 1,
+            "6-3": 6
         },
         "url": [
             "https://youtu.be/_rT8_IefoWY",
@@ -242,7 +250,8 @@
             "5-27": 93,
             "5-28": 72,
             "5-29": 38,
-            "5-30": 22
+            "5-30": 22,
+            "6-2": 3
         },
         "url": [
             "https://youtu.be/_rT8_IefoWY",
@@ -260,7 +269,9 @@
             "5-29": 32,
             "5-30": 19,
             "5-31": 2,
-            "6-1": 3
+            "6-1": 3,
+            "6-2": 7,
+            "6-3": 4
         },
         "url": [
             "https://onepage.nownews.com/News/Living/taiwan-covid-19-0527"
@@ -275,7 +286,9 @@
             "5-29": 45,
             "5-30": 23,
             "5-31": 6,
-            "6-1": 1
+            "6-1": 1,
+            "6-2": 25,
+            "6-3": 17
         },
         "url":[
             "https://udn.com/news/story/120940/5492249"
@@ -289,7 +302,9 @@
         "校正回歸":{
             "5-30": 15,
             "5-31": 7,
-            "6-1": 7
+            "6-1": 7,
+            "6-2": 29,
+            "6-3": 24
         },
         "url": [
             "https://ctee.com.tw/news/policy/467150.html",
@@ -303,7 +318,9 @@
         "備註": [],
         "校正回歸":{
             "5-31": 51,
-            "6-1": 11
+            "6-1": 11,
+            "6-2": 46,
+            "6-3": 43
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/CXDf3UoUsTjxO6_cwsqm3A?typeid=9"
@@ -315,7 +332,9 @@
         "死亡": 15,
         "備註": [],
         "校正回歸": {
-            "5-31": 41
+            "5-31": 41,
+            "6-2": 29,
+            "6-3": 30
         },
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=3NTCX4wK-auPibRdNy4oNw"
@@ -326,9 +345,35 @@
         "本土": 262,
         "死亡": 13,
         "備註": [],
+        "校正回歸":{
+            "6-2": 28,
+            "6-3": 32
+        },
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=NbJPnux7EVXkJOnojvfmzw",
             "https://health.udn.com/health/story/122189/5500667"
+        ]
+    },
+    "6-2": {
+        "境外": 0,
+        "本土": 372,
+        "死亡": 12,
+        "備註": [],
+        "校正回歸": {
+            "6-3": 56
+        },
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/-dgNWLOlnaFW6w6aXu56Gg?typeid=9",
+            "https://newtalk.tw/news/view/2021-06-02/582988"
+        ]
+    },"6-3": {
+        "境外": 2,
+        "本土": 364,
+        "死亡": 17,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/OUnnUS1b3dI3KifFOW9YDQ?typeid=9"
         ]
     }
 }
