@@ -24,6 +24,12 @@ canvas{
   direction: rtl;
 }
 
+.cetner{
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
 :root{
   --mdc-theme-primary: #171213;
   --mdc-theme-secondary: #018786;
