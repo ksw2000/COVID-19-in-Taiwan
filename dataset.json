@@ -176,7 +176,8 @@
             "5-26": 27,
             "5-27": 22,
             "5-28": 13,
-            "5-29": 8
+            "5-29": 8,
+            "6-4": 1
         },
         "url":[
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=wqV3lKEhPhIxfAcYUmxgyA"
@@ -196,7 +197,8 @@
             "5-29": 11,
             "5-31": 1,
             "6-1": 1,
-            "6-2": 1
+            "6-2": 1,
+            "6-4": 1
         },
         "url":[
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=zpyeez9DR02hYPPArtt0jg",
@@ -215,7 +217,8 @@
             "5-28": 21,
             "5-29": 13,
             "5-31": 2,
-            "6-1": 1
+            "6-1": 1,
+            "6-4": 1
         },
         "url":[
             "https://youtu.be/LC6b2_4_HUo",
@@ -272,7 +275,8 @@
             "5-31": 2,
             "6-1": 3,
             "6-2": 7,
-            "6-3": 4
+            "6-3": 4,
+            "6-4": 1
         },
         "url": [
             "https://onepage.nownews.com/News/Living/taiwan-covid-19-0527"
@@ -289,7 +293,8 @@
             "5-31": 6,
             "6-1": 1,
             "6-2": 25,
-            "6-3": 17
+            "6-3": 17,
+            "6-4": 1
         },
         "url":[
             "https://udn.com/news/story/120940/5492249"
@@ -305,7 +310,8 @@
             "5-31": 7,
             "6-1": 7,
             "6-2": 29,
-            "6-3": 24
+            "6-3": 24,
+            "6-4": 5
         },
         "url": [
             "https://ctee.com.tw/news/policy/467150.html",
@@ -321,7 +327,8 @@
             "5-31": 51,
             "6-1": 11,
             "6-2": 46,
-            "6-3": 43
+            "6-3": 43,
+            "6-4": 8
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/CXDf3UoUsTjxO6_cwsqm3A?typeid=9"
@@ -335,7 +342,8 @@
         "校正回歸": {
             "5-31": 41,
             "6-2": 29,
-            "6-3": 30
+            "6-3": 30,
+            "6-4": 12
         },
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=3NTCX4wK-auPibRdNy4oNw"
@@ -348,7 +356,8 @@
         "備註": [],
         "校正回歸":{
             "6-2": 28,
-            "6-3": 32
+            "6-3": 32,
+            "6-4": 8
         },
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=NbJPnux7EVXkJOnojvfmzw",
@@ -361,7 +370,8 @@
         "死亡": 12,
         "備註": [],
         "校正回歸": {
-            "6-3": 56
+            "6-3": 56,
+            "6-4": 53
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/-dgNWLOlnaFW6w6aXu56Gg?typeid=9",
@@ -372,9 +382,22 @@
         "本土": 364,
         "死亡": 17,
         "備註": [],
-        "校正回歸": {},
+        "校正回歸": {
+            "6-4": 42
+        },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/OUnnUS1b3dI3KifFOW9YDQ?typeid=9"
+        ]
+    },"6-4": {
+        "境外": 2,
+        "本土": 339,
+        "死亡": 21,
+        "備註": [],
+        "校正回歸": {
+            "6-4": 42
+        },
+        "url": [
+            "https://www.facebook.com/mohw.gov.tw/?__cft__[0]=AZV0x6Ufc9PjYX_SoiYbr9HLlh7wqw461fcydV7oR2W1fZr4K-ZlEOkOB4sAIBxl18fzoUaQemGI7qZEGhq1jyaVrs4u_HY_FlndUWt5lPztft5vVsNGU050Sn3085ihzofgabWTgRdbyrXXggA1tzxD-kCt1SF4NYd5sKyFWQXoJ-iNBCRmdZm6i8_xB0XV_L0&__tn__=-UC%2CP-R"
         ]
     }
 }
