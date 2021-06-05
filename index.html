@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="main.css?20210603">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-    <script src="main.js?20210605" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"></script>
+    <script src="main.js?202106052200" defer></script>
   </head>
   <body>
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
@@ -44,6 +44,12 @@
       <h2>ㄑㄩㄕˋ</h2>
       <div class="hori-scroll">
         <canvas id="myLineChart"></canvas>
+      </div>
+
+      <h2>5/11 ㄓˋㄐㄧㄣㄑㄩㄝˋㄓㄣˇㄈㄣㄅㄨˋ</h2>
+      <p>ㄅㄨˋㄆㄞˊㄔㄨˊ ㄎㄤㄈㄨˋㄓㄜˇㄐㄧˊㄙˇㄨㄤˊㄍㄜˋㄢˋ，ㄧㄣㄨㄟˋㄓㄠˇㄅㄨˊㄉㄠˋㄕㄨˋㄐㄩˋ</p>
+      <div class="hori-scroll">
+        <canvas id="myPieChart" style="width: 500px;"></canvas>
       </div>
 
       <h2>ㄉㄢㄖˋㄈㄚㄅㄨˋㄑㄩㄝˋㄓㄣˇㄗㄨㄥˇㄕㄨˋ</h2>

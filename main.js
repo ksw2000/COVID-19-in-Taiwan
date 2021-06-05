@@ -3,10 +3,10 @@ const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 
 fetch('dataset.json')
-    .then(function (response) {
-        return response.json();
+    .then((res) => {
+        return res.json();
     })
-    .then(function (data) {
+    .then((data) => {
         let labels = [];
         let confirmed = [];                 // 本土單日確診
         let backlog = [];                   // 本土單日校正回歸
@@ -100,23 +100,12 @@ fetch('dataset.json')
             },
             options: {
                 scales: {
-                    x: {
-                        stacked: false,
-                    },
                     y: {
-                        stacked: false,
                         beginAtZero: true,
                         min: 0,
                         max: 600,
                         ticks: {
                             stepSize: 20
-                        }
-                    }
-                },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            footer: footer,
                         }
                     }
                 }
@@ -132,22 +121,6 @@ fetch('dataset.json')
                     data: death,
                     backgroundColor: 'rgba(115, 115, 115, 0.8)'
                 }]
-            },
-            options: {
-                scales: {
-                    x: {
-                        stacked: true,
-                    },
-                    y: {
-                        stacked: true,
-                        beginAtZero: true,
-                        min: 0,
-                        max: 50,
-                        ticks: {
-                            stepSize: 1
-                        }
-                    }
-                }
             }
         });
 
@@ -202,3 +175,96 @@ fetch('dataset.json')
         });
     });
 
+
+fetch('city_statistic.json')
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        let dataList = [];
+        let sum = 0;
+        Object.keys(data.data).forEach(city => {
+            sum += data.data[city];
+            dataList.push({
+                city: city,
+                num: data.data[city]
+            });
+        })
+        dataList.sort((a, b) => {
+            return (a.num < b.num) ? 1 : -1;
+        });
+
+        let citys = [];
+        let nums = [];
+        let other = 0;
+        // 數字小於 5% 的話加入 other
+        dataList.forEach(e => {
+            if (citys.length >= 6) {
+                other += e.num;
+            } else {
+                citys.push(e.city);
+                nums.push(e.num);
+            }
+        });
+        citys.push("其他");
+        nums.push(other);
+
+        const footerMyPie = (tooltipItems) => {
+            return `${(tooltipItems[0].raw / sum * 100).toFixed(1)}%`;
+        }
+        const myPieChart = new Chart(document.getElementById('myPieChart').getContext('2d'), {
+            type: 'pie',
+            plugins: [ChartDataLabels],
+            data: {
+                labels: citys,
+                datasets: [{
+                    label: '確診縣市',
+                    data: nums,
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(205, 155, 36)',
+                        'rgb(75, 192, 192)',
+                        'rgb(54, 162, 235)',
+                        'rgb(153, 102, 255)',
+                        'rgb(150, 150, 150)'
+                    ]
+                }]
+            }, options: {
+                layout: {
+                    padding: 50
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            footer: footerMyPie,
+                        }
+                    }, datalabels: {
+                        anchor: 'end',
+                        align: 'end',
+                        offset: 10,
+                        color: '#505050',
+                        clamp: true,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: (num,ctx)=>{
+                            return `${ctx.chart.data.labels[ctx.dataIndex]}\n${(num/sum*100).toFixed(1)}%`
+                        }, labels: {
+                            title: {
+                                font: {
+                                    weight: 'bold'
+                                }
+                            },
+                            value: {
+                                color: 'green'
+                            }
+                        }
+                    }, legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+    });
