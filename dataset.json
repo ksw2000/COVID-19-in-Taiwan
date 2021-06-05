@@ -60,7 +60,8 @@
             "5-24": 12,
             "5-25": 7,
             "5-28": 4,
-            "5-31": 3
+            "5-31": 3,
+            "6-5": 1
         },
         "備註": ["指揮中心授權縣市政府公布足跡"],
         "url": [
@@ -311,7 +312,8 @@
             "6-1": 7,
             "6-2": 29,
             "6-3": 24,
-            "6-4": 5
+            "6-4": 5,
+            "6-5": 8
         },
         "url": [
             "https://ctee.com.tw/news/policy/467150.html",
@@ -343,7 +345,8 @@
             "5-31": 41,
             "6-2": 29,
             "6-3": 30,
-            "6-4": 12
+            "6-4": 12,
+            "6-5": 8
         },
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=3NTCX4wK-auPibRdNy4oNw"
@@ -357,7 +360,8 @@
         "校正回歸":{
             "6-2": 28,
             "6-3": 32,
-            "6-4": 8
+            "6-4": 8,
+            "6-5": 2
         },
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=NbJPnux7EVXkJOnojvfmzw",
@@ -371,7 +375,8 @@
         "備註": [],
         "校正回歸": {
             "6-3": 56,
-            "6-4": 53
+            "6-4": 53,
+            "6-5": 7
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/-dgNWLOlnaFW6w6aXu56Gg?typeid=9",
@@ -383,7 +388,8 @@
         "死亡": 17,
         "備註": [],
         "校正回歸": {
-            "6-4": 42
+            "6-4": 42,
+            "6-5": 9
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/OUnnUS1b3dI3KifFOW9YDQ?typeid=9"
@@ -397,7 +403,17 @@
             "6-4": 42
         },
         "url": [
-            "https://www.facebook.com/mohw.gov.tw/?__cft__[0]=AZV0x6Ufc9PjYX_SoiYbr9HLlh7wqw461fcydV7oR2W1fZr4K-ZlEOkOB4sAIBxl18fzoUaQemGI7qZEGhq1jyaVrs4u_HY_FlndUWt5lPztft5vVsNGU050Sn3085ihzofgabWTgRdbyrXXggA1tzxD-kCt1SF4NYd5sKyFWQXoJ-iNBCRmdZm6i8_xB0XV_L0&__tn__=-UC%2CP-R"
+            "https://www.facebook.com/mohw.gov.tw/"
+        ]
+    },"6-5": {
+        "境外": 0,
+        "本土": 476,
+        "死亡": 38,
+        "備註": [],
+        "校正回歸": {
+        },
+        "url": [
+            "https://www.facebook.com/mohw.gov.tw/"
         ]
     }
 }
