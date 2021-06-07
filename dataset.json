@@ -330,7 +330,8 @@
             "6-1": 11,
             "6-2": 46,
             "6-3": 43,
-            "6-4": 8
+            "6-4": 8,
+            "6-6": 1
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/CXDf3UoUsTjxO6_cwsqm3A?typeid=9"
@@ -389,7 +390,8 @@
         "備註": [],
         "校正回歸": {
             "6-4": 42,
-            "6-5": 9
+            "6-5": 9,
+            "6-6": 1
         },
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/OUnnUS1b3dI3KifFOW9YDQ?typeid=9"
@@ -400,7 +402,8 @@
         "死亡": 21,
         "備註": [],
         "校正回歸": {
-            "6-4": 42
+            "6-4": 42,
+            "6-6": 6
         },
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
@@ -408,10 +411,30 @@
     },"6-5": {
         "境外": 0,
         "本土": 476,
-        "死亡": 38,
+        "死亡": 37,
+        "備註": ["當日下午死亡人數下修 38→37"],
+        "校正回歸": {
+        },
+        "url": [
+            "https://www.facebook.com/mohw.gov.tw/"
+        ]
+    },"6-6": {
+        "境外": 0,
+        "本土": 335,
+        "死亡": 36,
         "備註": [],
         "校正回歸": {
         },
+        "url": [
+            "https://www.facebook.com/mohw.gov.tw/"
+        ]
+    },
+    "6-7": {
+        "境外": 3,
+        "本土": 211,
+        "死亡": 26,
+        "備註": ["宣佈延長「強化三級警戒」到 6/28"],
+        "校正回歸": {},
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
         ]
