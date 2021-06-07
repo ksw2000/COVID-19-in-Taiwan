@@ -24,15 +24,15 @@ https.get('https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.js
         });
         console.log(cityMap);
         let date = new Date();
-        let yyyy = date.getFullYear();
-        let m = date.getMonth() + 1;
-        let mm = (m < 10) ? `0${m}` : `${m}`;
-        let d = date.getDate();
-        let dd = (d < 10) ? `0${d}` : `${d}`;
+        let Y = date.getFullYear().toString();
+        let M = (date.getMonth() + 1).toString();
+        let D = date.getDate().toString();
+        let h = date.getHours().toString();
+        let m = date.getMinutes().toString();
 
         let output = {
             dateFrom: dateFrom,
-            lastModified: `${yyyy}${mm}${dd}`,
+            lastModified: `${Y.padStart(4, 0)}/${M.padStart(2, 0)}/${D.padStart(2, 0)}-${h.padStart(2, 0)}:${m.padStart(2, 0)}`,
             data: cityMap
         }
         fs.writeFileSync('city_statistic.json', JSON.stringify(output), { flag: 'w+' })
