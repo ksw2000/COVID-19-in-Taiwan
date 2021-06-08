@@ -35,25 +35,16 @@ fetch('dataset.json')
             death.push((data[date]['死亡']) ? data[date]['死亡'] : 0);
         });
 
-        const footer = (tooltipItems) => {
-            let sum = 0;
-            tooltipItems.forEach((tooltipItem) => {
-                sum += tooltipItem.parsed.y;
-            });
-            let d = death[tooltipItems[0].parsed.x];
-            return `ㄗㄨㄥˇㄏㄜˊ: ${sum}\nㄙˇㄨㄤˊ: ${d}`;
-        }
-
         const myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'ㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟㄑㄧㄢˊ',
+                    label: '當日發佈數據',
                     data: confirmed,
                     backgroundColor: 'rgba(0, 166, 255, 0.8)'
                 }, {
-                    label: 'ㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟ',
+                    label: '校正回歸',
                     data: backlog,
                     backgroundColor: 'rgba(138, 192, 222, 0.8)'
                 }]
@@ -77,25 +68,42 @@ fetch('dataset.json')
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            footer: footer,
+                            footer: (tooltipItems) => {
+                                let sum = 0;
+                                tooltipItems.forEach((tooltipItem) => {
+                                    sum += tooltipItem.parsed.y;
+                                });
+                                let d = death[tooltipItems[0].parsed.x];
+                                return `總合: ${sum}\n死亡: ${d}`;
+                            },
                         }
                     }
                 }
             }
         });
 
+        const lineLabelPlugin = {
+            datalabels: {
+                align: 'end',
+                offset: 10,
+                color: '#505050',
+                //clamp: true,
+                font: {
+                    weight: 'bold'
+                },
+            }, legend: {
+                display: false
+            },
+        }
         const myLineChart = new Chart(document.getElementById('myLineChart').getContext('2d'), {
             type: 'line',
+            plugins: [ChartDataLabels],
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'ㄑㄩㄝˋㄓㄣˇㄕㄨˋ',
+                    label: '確診數',
                     data: confirmedAfterBackLog,
                     backgroundColor: 'rgba(0, 166, 255, 0.8)'
-                }, {
-                    label: 'ㄙˇㄨㄤˊㄕㄨˋ',
-                    data: death,
-                    backgroundColor: 'rgba(255, 74, 74, 0.8)'
                 }]
             },
             options: {
@@ -108,7 +116,29 @@ fetch('dataset.json')
                             stepSize: 20
                         }
                     }
-                }
+                }, plugins: lineLabelPlugin
+            }
+        });
+
+        const myLineChartDeath = new Chart(document.getElementById('myLineChart-death').getContext('2d'), {
+            type: 'line',
+            plugins: [ChartDataLabels],
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: '死亡數',
+                    data: death,
+                    backgroundColor: 'rgba(255, 74, 74, 0.8)'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 50
+                    }
+                }, plugins: lineLabelPlugin
             }
         });
 
@@ -117,10 +147,16 @@ fetch('dataset.json')
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'ㄙˇㄨㄤˊㄖㄣˊㄕㄨˋ',
+                    label: '死亡人數',
                     data: death,
                     backgroundColor: 'rgba(115, 115, 115, 0.8)'
                 }]
+            }, options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
 
@@ -138,18 +174,18 @@ fetch('dataset.json')
         const footerSingleDay = (tooltipItems) => {
             let x = tooltipItems[0].dataIndex;
             let sum = confirmed[x] + backgroundColorList[x]
-            return `ㄏㄜˊㄐ一ˋ : ${sum}`;
+            return `合計：${sum}`;
         }
         const myChartSingleDay = new Chart(document.getElementById('myChartSingleDay').getContext('2d'), {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'ㄉㄤㄖˋㄑㄩㄝˋㄓㄣˇ',
+                    label: '當日確診',
                     data: confirmed,
                     backgroundColor: 'rgba(255, 142, 71, 0.8)'
                 }, {
-                    label: 'ㄉㄤㄖˋㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟ',
+                    label: '當日校正迴歸',
                     data: backgroundColorList,
                     backgroundColor: 'rgba(255, 232, 138, 0.8)'
                 }]
@@ -181,90 +217,77 @@ fetch('city_statistic.json')
         return res.json();
     })
     .then((data) => {
-        let dataList = [];
-        let sum = 0;
-        Object.keys(data.data).forEach(city => {
-            sum += data.data[city];
-            dataList.push({
-                city: city,
-                num: data.data[city]
+        for (mode = 0; mode < 2; mode++) {
+            let citys = [];
+            let nums = [];
+            let proportion = [];
+            let numOther = 0;
+            let proportionOther = 0;
+
+            data.dataList[(mode == 0) ? 'from511' : 'before14'].forEach(e => {
+                if (citys.length >= 7) {
+                    numOther += e.num;
+                    proportionOther += e.proportion;
+                } else {
+                    citys.push(e.city);
+                    nums.push(e.num);
+                    proportion.push(e.proportion);
+                }
             });
-        })
-        dataList.sort((a, b) => {
-            return (a.num < b.num) ? 1 : -1;
-        });
+            citys.push("其他");
+            nums.push(numOther);
+            proportion.push(proportionOther);
 
-        let citys = [];
-        let nums = [];
-        let other = 0;
-        // 數字小於 5% 的話加入 other
-        dataList.forEach(e => {
-            if (citys.length >= 6) {
-                other += e.num;
-            } else {
-                citys.push(e.city);
-                nums.push(e.num);
-            }
-        });
-        citys.push("其他");
-        nums.push(other);
-
-        const footerMyPie = (tooltipItems) => {
-            return `${(tooltipItems[0].raw / sum * 100).toFixed(1)}%`;
-        }
-        const myPieChart = new Chart(document.getElementById('myPieChart').getContext('2d'), {
-            type: 'pie',
-            plugins: [ChartDataLabels],
-            data: {
-                labels: citys,
-                datasets: [{
-                    label: '確診縣市',
-                    data: nums,
-                    backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(255, 159, 64)',
-                        'rgb(205, 155, 36)',
-                        'rgb(75, 192, 192)',
-                        'rgb(54, 162, 235)',
-                        'rgb(153, 102, 255)',
-                        'rgb(150, 150, 150)'
-                    ]
-                }]
-            }, options: {
-                layout: {
-                    padding: 50
-                },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            footer: footerMyPie,
-                        }
-                    }, datalabels: {
-                        anchor: 'end',
-                        align: 'end',
-                        offset: 10,
-                        color: '#505050',
-                        clamp: true,
-                        font: {
-                            weight: 'bold'
-                        },
-                        formatter: (num,ctx)=>{
-                            return `${ctx.chart.data.labels[ctx.dataIndex]}\n${(num/sum*100).toFixed(1)}%`
-                        }, labels: {
-                            title: {
-                                font: {
-                                    weight: 'bold'
-                                }
-                            },
-                            value: {
-                                color: 'green'
+            let dom = (mode == 0) ? 'myPieChart' : 'myPieChart-14';
+            document.getElementById(`${dom}-update-date`).textContent = data.lastModified.split('-')[0];
+            new Chart(document.getElementById(dom).getContext('2d'), {
+                type: 'pie',
+                plugins: [ChartDataLabels],
+                data: {
+                    labels: citys,
+                    datasets: [{
+                        label: '確診縣市',
+                        data: nums,
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(232, 210, 3)',
+                            'rgb(75, 192, 192)',
+                            'rgb(54, 162, 235)',
+                            'rgb(153, 102, 255)',
+                            'rgb(205, 155, 36)',
+                            'rgb(150, 150, 150)'
+                        ]
+                    }]
+                }, options: {
+                    layout: {
+                        padding: 50
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                footer: (tooltipItems) => {
+                                    console.log(tooltipItems);
+                                    return `${(proportion[tooltipItems[0].dataIndex] * 100).toFixed(1)} %`;
+                                },
                             }
+                        }, datalabels: {
+                            anchor: 'end',
+                            align: 'end',
+                            offset: 10,
+                            color: '#505050',
+                            clamp: true,
+                            font: {
+                                weight: 'bold'
+                            },
+                            formatter: (num, ctx) => {
+                                return `${ctx.chart.data.labels[ctx.dataIndex]}\n${(proportion[ctx.dataIndex] * 100).toFixed(1)}%`
+                            }
+                        }, legend: {
+                            display: false
                         }
-                    }, legend: {
-                        display: false
                     }
                 }
-            }
-        });
-
+            });
+        }
     });

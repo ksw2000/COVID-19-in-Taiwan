@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ㄊㄞˊㄨㄢㄐㄧㄥˋㄋㄟˋㄐㄧㄣˋㄑㄧˊㄨˇㄏㄢˋㄈㄟˋㄧㄢˊㄧˋㄑㄧㄥˊㄕㄨˋㄐㄩˋ</title>
+    <title>ㄊㄞˊㄨㄢ境內近期ˊㄨˇㄏㄢˋㄈㄟˋㄧㄢˊ疫情數據</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -9,13 +9,13 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"></script>
-    <script src="main.js?202106052200" defer></script>
+    <script src="main.js?202106082144" defer></script>
   </head>
   <body>
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <span class="mdc-top-app-bar__title">ㄨˇㄏㄢˋㄈㄟˋㄧㄢˊㄧˋㄑㄧㄥˊㄕㄨˋㄐㄩˋ</span>
+          <span class="mdc-top-app-bar__title">ㄨˇㄏㄢˋㄈㄟˋㄧㄢˊ疫情數據</span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
           <button class="mdc-button white-text-button" id="nav-project-button">
@@ -31,36 +31,49 @@
     </header>
     <!------------------------------------------>
     <main class="mdc-top-app-bar--fixed-adjust routing-content">
-      <h2>ㄗㄨㄟˋㄐㄧㄣˋㄅㄣˇㄊㄨˇㄑㄩㄝˋㄓㄣˇㄕㄨˋ</h2>
+      <h2>最近本土確診數</h2>
       <div class="hori-scroll">
         <canvas id="myChart"></canvas>
       </div>
 
-      <h2>ㄗㄨㄟˋㄐㄧㄣˋㄅㄣˇㄊㄨˇㄙˇㄨㄤˊㄕㄨˋ</h2>
+      <h2>最近本土死亡數</h2>
       <div class="hori-scroll">
         <canvas id="myChartDeath"></canvas>
       </div>
 
-      <h2>ㄑㄩㄕˋ</h2>
+      <h2>確診趨勢</h2>
       <div class="hori-scroll">
         <canvas id="myLineChart"></canvas>
       </div>
 
-      <h2>5/11 ㄓˋㄐㄧㄣㄑㄩㄝˋㄓㄣˇㄈㄣㄅㄨˋ</h2>
-      <p>ㄅㄨˋㄆㄞˊㄔㄨˊ ㄎㄤㄈㄨˋㄓㄜˇㄐㄧˊㄙˇㄨㄤˊㄍㄜˋㄢˋ，ㄧㄣㄨㄟˋㄓㄠˇㄅㄨˊㄉㄠˋㄕㄨˋㄐㄩˋ</p>
+      <h2>死亡趨勢</h2>
+      <div class="hori-scroll">
+        <canvas id="myLineChart-death"></canvas>
+      </div>
+      
+      <h2>5/11 至今確診分佈地區</h2>
+      <p>更新日期：<span id="myPieChart-update-date"></span></p>
+      <p>不排除康復者及死亡個案，因為找不到資料</p>
       <div class="hori-scroll">
         <canvas id="myPieChart" style="width: 500px;"></canvas>
       </div>
 
-      <h2>ㄉㄢㄖˋㄈㄚㄅㄨˋㄑㄩㄝˋㄓㄣˇㄗㄨㄥˇㄕㄨˋ</h2>
-      <p>ㄐㄧㄣˋㄖˋㄑㄩㄝˋㄓㄣˇ + ㄉㄤㄖˋㄐㄧㄠˋㄓㄥˋㄏㄨㄟˊㄍㄨㄟㄓㄕㄨˋㄌㄧㄤˋ</p>
+      <h2>近 14 日確診者分佈地區</h2>
+      <p>更新日期：<span id="myPieChart-14-update-date"></span></p>
+      <p>不排除康復者及死亡個案，因為找不到資料</p>
+      <div class="hori-scroll">
+        <canvas id="myPieChart-14" style="width: 500px;"></canvas>
+      </div>
+
+      <h2>單日發佈確診總數</h2>
+      <p>確診數 + 當日所發佈之校正迴歸數量</p>
       <div class="hori-scroll">
         <canvas id="myChartSingleDay"></canvas>
       </div>
       <hr>
 
-      <a href="https://github.com/liao2000/Wuuuuhaaaan-virus-in-Taiwan"><img alt="ㄍㄧㄊㄏㄚˋㄅ ㄌ一ˇㄆㄚㄙㄜˇㄊㄛㄌ一ˇ" src="https://img.shields.io/badge/repositories-Wuuuuhaaaan--virus--in--Taiwan-brightgreen?logo=github"></a>
-      <p>ㄕㄨˋㄐㄩˋㄖㄨㄛˋㄧㄡˇㄨˋㄎㄜˇㄧˇㄈㄚ<a href="https://github.com/liao2000/Wuuuuhaaaan-virus-in-Taiwan/pulls">ㄆㄨㄛㄌ一ˇㄎㄩㄝˋㄙㄊ</a></p>
+      <a href="https://github.com/liao2000/Wuuuuhaaaan-virus-in-Taiwan"><img alt="github repository" src="https://img.shields.io/badge/repositories-Wuuuuhaaaan--virus--in--Taiwan-brightgreen?logo=github"></a>
+      <p>數據若有誤可以發<a href="https://github.com/liao2000/Wuuuuhaaaan-virus-in-Taiwan/pulls">pull request</a></p>
       <div class="center">
         <img src="https://i.imgur.com/pubNv6P.gif" style="width: 100%; max-width:1240px;">
       </div>
