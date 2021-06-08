@@ -438,5 +438,15 @@
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
         ]
+    },
+    "6-8": {
+        "境外": 0,
+        "本土": 219,
+        "死亡": 22,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.facebook.com/mohw.gov.tw/"
+        ]
     }
 }
