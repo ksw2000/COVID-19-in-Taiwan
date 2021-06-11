@@ -468,5 +468,13 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/lMHQW2_3wdE5B0rVqMdwKA?typeid=9"
         ]
+    },
+    "6-11": {
+        "境外": 1,
+        "本土": 286,
+        "死亡": 24,
+        "備註": [],
+        "校正回歸": {},
+        "url": []
     }
 }
