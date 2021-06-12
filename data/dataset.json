@@ -475,6 +475,14 @@
         "死亡": 24,
         "備註": [],
         "校正回歸": {},
-        "url": []
+        "url": ["https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=YCIJBF3p851kbsP5H1TZtw"]
+    },
+    "6-12": {
+        "境外": 1,
+        "本土": 250,
+        "死亡": 26,
+        "備註": [],
+        "校正回歸": {},
+        "url": ["https://www.cdc.gov.tw/Bulletin/Detail/MHEOJlq75e2VYGkuBMGeJQ?typeid=9"]
     }
 }
