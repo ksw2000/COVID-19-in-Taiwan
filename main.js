@@ -2,7 +2,7 @@
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 
-fetch('dataset.json')
+fetch('/data/dataset.json')
     .then((res) => {
         return res.json();
     })
@@ -120,7 +120,7 @@ fetch('dataset.json')
             }
         });
 
-        const myLineChartDeath = new Chart(document.getElementById('myLineChart-death').getContext('2d'), {
+        const myLineChartDeath = new Chart(document.getElementById('myLineChartDeath').getContext('2d'), {
             type: 'line',
             plugins: [ChartDataLabels],
             data: {
@@ -159,7 +159,6 @@ fetch('dataset.json')
                 }
             }
         });
-
 
         // backlogCounterToList
         let backgroundColorList = [];
@@ -212,7 +211,7 @@ fetch('dataset.json')
     });
 
 
-fetch('city_statistic.json')
+fetch('/data/city_statistic.json')
     .then((res) => {
         return res.json();
     })
@@ -267,7 +266,6 @@ fetch('city_statistic.json')
                         tooltip: {
                             callbacks: {
                                 footer: (tooltipItems) => {
-                                    console.log(tooltipItems);
                                     return `${(proportion[tooltipItems[0].dataIndex] * 100).toFixed(1)} %`;
                                 },
                             }
