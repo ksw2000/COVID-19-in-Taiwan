@@ -65,6 +65,58 @@ https.get('https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.js
                 before14: tasks[1].dataList
             }
         }
-        fs.writeFileSync('city_statistic.json', JSON.stringify(output, null, '\t'), { flag: 'w+' })
+        fs.writeFileSync('./data/city_statistic.json', JSON.stringify(output, null, '\t'), { flag: 'w+' })
+    });
+});
+
+function oneLineCSVParser(str){
+    let list = Array.from(str);
+    let res = [];
+    let quoteMode = false;
+    let stringBuffer = "";
+    list.forEach((e)=>{
+        if(e != "\n" && e != "\r"){
+            if (!quoteMode) {
+                switch (e) {
+                    case '"':
+                        quoteMode = true;
+                        break;
+                    case ",":
+                        res.push(stringBuffer);
+                        stringBuffer = "";
+                        break;
+                    default:
+                        stringBuffer += e;
+                }
+            } else {
+                switch (e) {
+                    case '"':
+                        quoteMode = false;
+                        break;
+                    default:
+                        stringBuffer += e;
+                }
+            }
+        }
+    });
+    res.push(stringBuffer);
+    return res;
+}
+
+https.get('https://od.cdc.gov.tw/eic/covid19/covid19_tw_stats.csv', (res) => {
+    let buffers = [];
+    res.on('data', chunk => {
+        buffers += chunk;
+    });
+    res.on('end', () => {
+        lines = buffers.toString().split('\n');
+        key = oneLineCSVParser(lines[0]);
+        val = oneLineCSVParser(lines[1]);
+
+        let output = {};
+        for(let i=0; i < key.length; i++){
+            output[key[i]] = parseInt(val[i].replace(',', ''));
+        }
+        fs.writeFileSync('./data/latest_statistic.json', JSON.stringify(output, null, '\t'), { flag: 'w+' })
     });
 });
