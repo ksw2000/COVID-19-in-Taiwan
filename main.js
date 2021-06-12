@@ -2,7 +2,7 @@
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 
-fetch('/data/dataset.json')
+fetch('./data/dataset.json')
     .then((res) => {
         return res.json();
     })
@@ -211,7 +211,7 @@ fetch('/data/dataset.json')
     });
 
 
-fetch('/data/city_statistic.json')
+fetch('./data/city_statistic.json')
     .then((res) => {
         return res.json();
     })
