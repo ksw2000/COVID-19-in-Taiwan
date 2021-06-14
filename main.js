@@ -1,6 +1,19 @@
 // nav bar
+const limit = "5-15"
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+
+// "5-11" -> 511
+function dateToNumber(date){
+    date = date.split("-");
+    month = Number(date[0]);
+    date = Number(date[1]);
+    return {
+        month: month,
+        date: date,
+        number: month*100+date
+    };
+}
 
 fetch('./data/dataset.json')
     .then((res) => {
@@ -14,25 +27,27 @@ fetch('./data/dataset.json')
         let death = [];                     // 本土單日死亡數字
         let backlogCounter = {};            // 本土單日發佈確診加上今日發佈的校正回歸 (不準確的數字)
         Object.keys(data).forEach(date => {
-            let confirmedToday = data[date]['本土'];
-            let backlogToday = 0;
-            if (data[date]['校正回歸']) {
-                Object.keys(data[date]['校正回歸']).forEach((key) => {
-                    if (typeof backlogCounter[key] === 'undefined') {
-                        backlogCounter[key] = data[date]['校正回歸'][key];
-                    } else {
-                        backlogCounter[key] += data[date]['校正回歸'][key];
-                    }
-                    backlogToday += data[date]['校正回歸'][key];
-                });
-            }
+            if (dateToNumber(date).number >= dateToNumber(limit).number){
+                let confirmedToday = data[date]['本土'];
+                let backlogToday = 0;
+                if (data[date]['校正回歸']) {
+                    Object.keys(data[date]['校正回歸']).forEach((key) => {
+                        if (typeof backlogCounter[key] === 'undefined') {
+                            backlogCounter[key] = data[date]['校正回歸'][key];
+                        } else {
+                            backlogCounter[key] += data[date]['校正回歸'][key];
+                        }
+                        backlogToday += data[date]['校正回歸'][key];
+                    });
+                }
 
-            // push
-            labels.push(date);
-            confirmed.push(confirmedToday);
-            backlog.push(backlogToday);
-            confirmedAfterBackLog.push(confirmedToday + backlogToday);
-            death.push((data[date]['死亡']) ? data[date]['死亡'] : 0);
+                // push
+                labels.push(date);
+                confirmed.push(confirmedToday);
+                backlog.push(backlogToday);
+                confirmedAfterBackLog.push(confirmedToday + backlogToday);
+                death.push((data[date]['死亡']) ? data[date]['死亡'] : 0);
+            }
         });
 
         const myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
