@@ -15,6 +15,32 @@ function dateToNumber(date){
     };
 }
 
+// party data
+const cityToParty = {
+    "基隆市": "民進黨",
+    "台北市": "民眾黨",
+    "新北市": "國民黨",
+    "宜蘭縣": "國民黨",
+    "桃園市": "民進黨",
+    "新竹縣": "國民黨",
+    "新竹市": "民進黨",
+    "苗栗縣": "國民黨",
+    "台中市": "國民黨",
+    "彰化縣": "國民黨",
+    "南投縣": "國民黨",
+    "雲林縣": "國民黨",
+    "嘉義縣": "民進黨",
+    "嘉義市": "國民黨",
+    "台南市": "民進黨",
+    "高雄市": "民進黨",
+    "屏東縣": "民進黨",
+    "花蓮縣": "國民黨",
+    "台東縣": "國民黨",
+    "澎湖縣": "國民黨",
+    "金門縣": "國民黨",
+    "連江縣": "國民黨",
+}
+
 fetch('./data/dataset.json')
     .then((res) => {
         return res.json();
@@ -238,16 +264,32 @@ fetch('./data/city_statistic.json')
             let numOther = 0;
             let proportionOther = 0;
 
+            let parties_num_map = {};
+            //let parties_list = [];
+            //let parties_num = [];
+
             data.dataList[(mode == 0) ? 'from511' : 'before14'].forEach(e => {
-                if (citys.length >= 7) {
-                    numOther += e.num;
-                    proportionOther += e.proportion;
-                } else {
-                    citys.push(e.city);
-                    nums.push(e.num);
-                    proportion.push(e.proportion);
+                party = cityToParty[e.city];
+                // 有些 city 的 label 超怪，好像是有亂碼吧
+                // 所以要過濾一下
+                if (party){
+                    if (parties_num_map[party]){
+                        parties_num_map[party] += e.num;
+                    }else{
+                        parties_num_map[party] = e.num;
+                    }
+
+                    if (citys.length >= 7) {
+                        numOther += e.num;
+                        proportionOther += e.proportion;
+                    } else {
+                        citys.push(e.city);
+                        nums.push(e.num);
+                        proportion.push(e.proportion);
+                    }
                 }
             });
+
             citys.push("其他");
             nums.push(numOther);
             proportion.push(proportionOther);
@@ -272,7 +314,7 @@ fetch('./data/city_statistic.json')
                             'rgb(205, 155, 36)',
                             'rgb(150, 150, 150)'
                         ]
-                    }]
+                    }, ]
                 }, options: {
                     layout: {
                         padding: 50
@@ -302,5 +344,9 @@ fetch('./data/city_statistic.json')
                     }
                 }
             });
+
+            document.querySelector(`#${dom}-table td[data-party='kmt']`).textContent = parties_num_map["國民黨"] + ' 人';
+            document.querySelector(`#${dom}-table td[data-party='tpp']`).textContent = parties_num_map["民眾黨"] + ' 人';
+            document.querySelector(`#${dom}-table td[data-party='dpp']`).textContent = parties_num_map["民進黨"] + ' 人';
         }
     });

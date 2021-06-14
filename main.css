@@ -33,7 +33,7 @@ canvas{
 :root{
   --mdc-theme-primary: #171213;
   --mdc-theme-secondary: #018786;
-  --mdc-theme-background: #fff;
+  --mdc-theme-background: #d8d8d8;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #f77070;
   --mdc-theme-on-primary: #fff;
@@ -55,4 +55,26 @@ canvas{
   --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5)
+}
+
+table{
+  border-collapse: collapse;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+tr{
+  color: var(--mdc-theme-secondary);
+  text-align: center;
+}
+
+th{
+  background-color: var(--mdc-theme-secondary);
+  color: var(--mdc-theme-on-primary);
+}
+
+td, th{
+  border: 1px solid var(--mdc-theme-secondary);
+  padding: 10px 0px;
 }

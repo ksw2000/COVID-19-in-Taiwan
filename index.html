@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css?20210603">
+    <link rel="stylesheet" href="main.css?20210615">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"></script>
-    <script src="main.js?202106082144" defer></script>
+    <script src="main.js?202106150143" defer></script>
   </head>
   <body>
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
@@ -56,13 +56,51 @@
       <p>不排除康復者及死亡個案，因為找不到資料</p>
       <div class="hori-scroll">
         <canvas id="myPieChart" style="width: 500px;"></canvas>
+        <p>依執政黨執政縣市統計</p>
+        <table id="myPieChart-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>中國國民黨</th>
+              <th>台灣民眾黨</th>
+              <th>民主進步黨</th>
+            </tr>
+          </thead>
+            <tbody>
+            <tr>
+              <td>人數</td>
+              <td data-party="kmt"></td>
+              <td data-party="tpp"></td>
+              <td data-party="dpp"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
+      
       <h2>近 14 日確診者分佈地區</h2>
       <p>更新日期：<span id="myPieChart-14-update-date"></span></p>
       <p>不排除康復者及死亡個案，因為找不到資料</p>
       <div class="hori-scroll">
         <canvas id="myPieChart-14" style="width: 500px;"></canvas>
+        <p>依執政黨執政縣市統計</p>
+        <table id="myPieChart-14-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>中國國民黨</th>
+              <th>台灣民眾黨</th>
+              <th>民主進步黨</th>
+            </tr>
+          </thead>
+            <tbody>
+            <tr>
+              <td>人數</td>
+              <td data-party="kmt"></td>
+              <td data-party="tpp"></td>
+              <td data-party="dpp"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <h2>單日發佈確診總數</h2>
