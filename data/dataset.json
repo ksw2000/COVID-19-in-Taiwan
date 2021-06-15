@@ -1,16 +1,18 @@
 {
-    "5-11":{
+    "5-11": {
         "境外": 4,
         "本土": 7,
         "死亡": 0,
-        "備註": ["全台進入二級防疫警戒"],
+        "備註": [
+            "全台進入二級防疫警戒"
+        ],
         "url": [
-            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=MnWwOI5n2Jo_5maGcbmIuQ", 
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=MnWwOI5n2Jo_5maGcbmIuQ",
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=3Bp_133jaKM_9c3TecbuTQ",
             "https://www.cdc.gov.tw/Bulletin/Detail/PHRzem5q4pU7_vHvVdCmRw?typeid=9"
         ]
     },
-    "5-12":{
+    "5-12": {
         "境外": 4,
         "本土": 16,
         "死亡": 0,
@@ -20,37 +22,41 @@
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=hEnmSusWsFg3LtxM5jF7bA"
         ]
     },
-    "5-13":{
+    "5-13": {
         "境外": 12,
         "本土": 13,
         "死亡": 0,
-        "備註":[""],
+        "備註": [
+            ""
+        ],
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Xrru0RM8mOY6JheR9zveyw",
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=J3NvQid9xJ6TmwtaXhwi-A"
         ]
     },
-    "5-14":{
+    "5-14": {
         "境外": 5,
         "本土": 29,
         "死亡": 0,
         "備註": [],
-        "url":[
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=L6TLOTilsKyHvun-Z_E3Dg",
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Gyr9hqrmpWhDubZOLy3EFA"
         ]
     },
-    "5-15":{
-        "境外": 5, 
+    "5-15": {
+        "境外": 5,
         "本土": 180,
         "死亡": 0,
-        "備註": ["雙北進入第三級警戒"],
-        "url":[
+        "備註": [
+            "雙北進入第三級警戒"
+        ],
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=jVFMlCxwCcylHiWlsNmTBg",
             "https://www.cna.com.tw/news/firstnews/202105155010.aspx"
         ]
     },
-    "5-16":{
+    "5-16": {
         "境外": 1,
         "本土": 206,
         "死亡": 0,
@@ -63,13 +69,15 @@
             "5-31": 3,
             "6-5": 1
         },
-        "備註": ["指揮中心授權縣市政府公布足跡"],
+        "備註": [
+            "指揮中心授權縣市政府公布足跡"
+        ],
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=J49fbJaEG-izHhujZpvUIw",
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=1YOLdmQelFpASMxHDm4HIw"
         ]
     },
-    "5-17":{
+    "5-17": {
         "境外": 2,
         "本土": 333,
         "死亡": 0,
@@ -83,12 +91,14 @@
             "5-28": 3,
             "6-3": 2
         },
-        "備註": ["雙北宣布停課"],
+        "備註": [
+            "雙北宣布停課"
+        ],
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=QZdaYxpncGhm5TwiJ-82kQ"
         ]
     },
-    "5-18":{
+    "5-18": {
         "境外": 5,
         "本土": 240,
         "死亡": 2,
@@ -108,7 +118,7 @@
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=4qdDEYlGMOtVjwuryQFY9Q"
         ]
     },
-    "5-19":{
+    "5-19": {
         "境外": 8,
         "本土": 267,
         "死亡": 0,
@@ -122,12 +132,14 @@
             "5-28": 7,
             "6-2": 2
         },
-        "備註": ["全台進入第三級防疫警戒"],
-        "url":[
+        "備註": [
+            "全台進入第三級防疫警戒"
+        ],
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=fznvbAyh16Agrx6GvaLhtQ"
         ]
     },
-    "5-20":{
+    "5-20": {
         "境外": 9,
         "本土": 286,
         "死亡": 1,
@@ -141,11 +153,11 @@
             "5-28": 7
         },
         "備註": [],
-        "url":[
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=IXE9yRaVxfGI8W9Dd_nfsw"
         ]
     },
-    "5-21":{
+    "5-21": {
         "境外": 3,
         "本土": 312,
         "死亡": 0,
@@ -161,15 +173,17 @@
             "6-2": 6,
             "6-3": 2
         },
-        "url":[
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=-cxOeHRhcVf1aXh8L3E7DA"
         ]
     },
-    "5-22":{
+    "5-22": {
         "境外": 2,
         "本土": 321,
         "死亡": 2,
-        "備註": ["台中宣布禁止內用"],
+        "備註": [
+            "台中宣布禁止內用"
+        ],
         "校正回歸": {
             "5-23": 32,
             "5-24": 27,
@@ -180,16 +194,16 @@
             "5-29": 8,
             "6-4": 1
         },
-        "url":[
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=wqV3lKEhPhIxfAcYUmxgyA"
         ]
     },
-    "5-23":{
+    "5-23": {
         "境外": 3,
         "本土": 287,
         "死亡": 6,
         "備註": [],
-        "校正回歸":{
+        "校正回歸": {
             "5-24": 57,
             "5-25": 40,
             "5-26": 46,
@@ -201,12 +215,12 @@
             "6-2": 1,
             "6-4": 1
         },
-        "url":[
+        "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=zpyeez9DR02hYPPArtt0jg",
             "https://youtu.be/lJUvNkiGNYc"
         ]
     },
-    "5-24":{
+    "5-24": {
         "境外": 5,
         "本土": 334,
         "死亡": 6,
@@ -221,12 +235,12 @@
             "6-1": 1,
             "6-4": 1
         },
-        "url":[
+        "url": [
             "https://youtu.be/LC6b2_4_HUo",
             "https://heho.com.tw/archives/175010"
         ]
     },
-    "5-25":{
+    "5-25": {
         "境外": 2,
         "本土": 281,
         "死亡": 6,
@@ -249,7 +263,9 @@
         "境外": 2,
         "本土": 302,
         "死亡": 11,
-        "備註": ["全台進入強化三級防疫警戒"],
+        "備註": [
+            "全台進入強化三級防疫警戒"
+        ],
         "校正回歸": {
             "5-27": 93,
             "5-28": 72,
@@ -283,7 +299,7 @@
             "https://onepage.nownews.com/News/Living/taiwan-covid-19-0527"
         ]
     },
-    "5-28":{
+    "5-28": {
         "境外": 2,
         "本土": 297,
         "死亡": 19,
@@ -297,7 +313,7 @@
             "6-3": 17,
             "6-4": 1
         },
-        "url":[
+        "url": [
             "https://udn.com/news/story/120940/5492249"
         ]
     },
@@ -306,7 +322,7 @@
         "本土": 320,
         "死亡": 21,
         "備註": [],
-        "校正回歸":{
+        "校正回歸": {
             "5-30": 15,
             "5-31": 7,
             "6-1": 7,
@@ -325,7 +341,7 @@
         "本土": 266,
         "死亡": 10,
         "備註": [],
-        "校正回歸":{
+        "校正回歸": {
             "5-31": 51,
             "6-1": 11,
             "6-2": 46,
@@ -358,7 +374,7 @@
         "本土": 262,
         "死亡": 13,
         "備註": [],
-        "校正回歸":{
+        "校正回歸": {
             "6-2": 28,
             "6-3": 32,
             "6-4": 8,
@@ -383,7 +399,8 @@
             "https://www.cdc.gov.tw/Bulletin/Detail/-dgNWLOlnaFW6w6aXu56Gg?typeid=9",
             "https://newtalk.tw/news/view/2021-06-02/582988"
         ]
-    },"6-3": {
+    },
+    "6-3": {
         "境外": 2,
         "本土": 364,
         "死亡": 17,
@@ -396,7 +413,8 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/OUnnUS1b3dI3KifFOW9YDQ?typeid=9"
         ]
-    },"6-4": {
+    },
+    "6-4": {
         "境外": 2,
         "本土": 339,
         "死亡": 21,
@@ -408,23 +426,25 @@
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
         ]
-    },"6-5": {
+    },
+    "6-5": {
         "境外": 0,
         "本土": 476,
         "死亡": 37,
-        "備註": ["當日下午死亡人數下修 38→37"],
-        "校正回歸": {
-        },
+        "備註": [
+            "當日下午死亡人數下修 38→37"
+        ],
+        "校正回歸": {},
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
         ]
-    },"6-6": {
+    },
+    "6-6": {
         "境外": 0,
         "本土": 335,
         "死亡": 36,
         "備註": [],
-        "校正回歸": {
-        },
+        "校正回歸": {},
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
         ]
@@ -433,7 +453,9 @@
         "境外": 3,
         "本土": 211,
         "死亡": 26,
-        "備註": ["宣佈延長「強化三級警戒」到 6/28"],
+        "備註": [
+            "宣佈延長「強化三級警戒」到 6/28"
+        ],
         "校正回歸": {},
         "url": [
             "https://www.facebook.com/mohw.gov.tw/"
@@ -475,7 +497,9 @@
         "死亡": 24,
         "備註": [],
         "校正回歸": {},
-        "url": ["https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=YCIJBF3p851kbsP5H1TZtw"]
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=YCIJBF3p851kbsP5H1TZtw"
+        ]
     },
     "6-12": {
         "境外": 1,
@@ -483,9 +507,10 @@
         "死亡": 26,
         "備註": [],
         "校正回歸": {},
-        "url": ["https://www.cdc.gov.tw/Bulletin/Detail/MHEOJlq75e2VYGkuBMGeJQ?typeid=9"]
-    }
-    ,
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/MHEOJlq75e2VYGkuBMGeJQ?typeid=9"
+        ]
+    },
     "6-13": {
         "境外": 1,
         "本土": 174,
@@ -495,8 +520,7 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/iGXRaqo6rnJ0Gh9PFDovyg?typeid=9"
         ]
-    }
-    ,
+    },
     "6-14": {
         "境外": 0,
         "本土": 185,
@@ -505,6 +529,16 @@
         "校正回歸": {},
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/832w8RYL7puxozPKMoTSAg?typeid=9"
+        ]
+    },
+    "6-15": {
+        "境外": 3,
+        "本土": 135,
+        "死亡": 8,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/DRnT39ZhmbVd21bWvHIEng?typeid=9"
         ]
     }
 }
