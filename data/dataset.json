@@ -540,5 +540,12 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/DRnT39ZhmbVd21bWvHIEng?typeid=9"
         ]
+    },"6-16": {
+        "境外": 3,
+        "本土": 167,
+        "死亡": 18,
+        "備註": [],
+        "校正回歸": {},
+        "url": []
     }
 }
