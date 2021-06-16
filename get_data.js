@@ -1,32 +1,40 @@
 const fs = require('fs');
 const https = require('https');
 
+// 2021/06/16 -> 20210616
+function dateConvert(str) {
+    return Number(str.split("/").join(""))
+}
+
 // get data from CDC
 https.get('https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.json', (res) => {
     let buffers = [];
+    let size = 0;
     res.on('data', chunk => {
-        buffers += chunk;
+        buffers.push(chunk);
+        size += chunk.length;
     });
     res.on('end', () => {
-        let jsonData = JSON.parse(buffers);
-        
+        buffers = Buffer.concat(buffers, size);
+        let jsonData = JSON.parse(buffers.toString());
+
         let before14Day = new Date((new Date()).valueOf() - 1000 * 60 * 60 * 24 * 14);
-            before14Day = before14Day.getFullYear() * 10000 + (before14Day.getMonth() + 1) * 100 + before14Day.getDate();
+        before14Day = before14Day.getFullYear() * 10000 + (before14Day.getMonth() + 1) * 100 + before14Day.getDate();
 
         let tasks = [{
             df: 20210511,
-            dataList:[]
-        },{ 
+            dataList: []
+        }, {
             df: Number(before14Day),
             dataList: []
         }];
 
 
-        for (let i = 0; i < tasks.length; i++){
+        for (let i = 0; i < tasks.length; i++) {
             // select data where date > df
             let cityMap = {};
             jsonData.forEach(element => {
-                if (element['是否為境外移入'] === '否' && Number(element['個案研判日']) >= tasks[i].df && typeof element['縣市'] != 'undefined') {
+                if (element['是否為境外移入'] === '否' && dateConvert(element['個案研判日']) >= tasks[i].df && typeof element['縣市'] != 'undefined') {
                     if (typeof cityMap[element['縣市']] === 'undefined') {
                         cityMap[element['縣市']] = 1;
                     } else {
@@ -50,10 +58,10 @@ https.get('https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.js
                 return (a.num < b.num) ? 1 : -1;
             });
 
-            tasks[i].dataList.forEach((e)=>{
+            tasks[i].dataList.forEach((e) => {
                 e.proportion = e.num / sum;
             });
-        }     
+        }
 
         let date = new Date();
         let h = date.getHours().toString();
@@ -69,13 +77,13 @@ https.get('https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.js
     });
 });
 
-function oneLineCSVParser(str){
+function oneLineCSVParser(str) {
     let list = Array.from(str);
     let res = [];
     let quoteMode = false;
     let stringBuffer = "";
-    list.forEach((e)=>{
-        if(e != "\n" && e != "\r"){
+    list.forEach((e) => {
+        if (e != "\n" && e != "\r") {
             if (!quoteMode) {
                 switch (e) {
                     case '"':
@@ -114,7 +122,7 @@ https.get('https://od.cdc.gov.tw/eic/covid19/covid19_tw_stats.csv', (res) => {
         val = oneLineCSVParser(lines[1]);
 
         let output = {};
-        for(let i=0; i < key.length; i++){
+        for (let i = 0; i < key.length; i++) {
             output[key[i]] = parseInt(val[i].replace(',', ''));
         }
         fs.writeFileSync('./data/latest_statistic.json', JSON.stringify(output, null, '\t'), { flag: 'w+' })
