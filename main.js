@@ -1,5 +1,5 @@
 // nav bar
-const limit = "5-15"
+const limit = "5-25"
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 
