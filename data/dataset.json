@@ -605,5 +605,25 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/7IX7KD-nM2TmIYgml7lDWg?typeid=9"
         ]
+    },
+    "6-23": {
+        "境外": 0,
+        "本土": 104,
+        "死亡": 24,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/mDFLj0aLsQztMI7vnMSy1w?typeid=9"
+        ]
+    },
+    "6-24": {
+        "境外": 1,
+        "本土": 129,
+        "死亡": 6,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/3A_GxvlYM4wkYEYTlozw6A?typeid=9"
+        ]
     }
 }
