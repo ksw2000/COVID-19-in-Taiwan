@@ -540,7 +540,8 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/DRnT39ZhmbVd21bWvHIEng?typeid=9"
         ]
-    },"6-16": {
+    },
+    "6-16": {
         "境外": 3,
         "本土": 167,
         "死亡": 18,
@@ -554,7 +555,9 @@
         "死亡": 19,
         "備註": [],
         "校正回歸": {},
-        "url": ["https://www.cdc.gov.tw/Bulletin/Detail/3EaqopBnYL-XoDtMI8qQEA?typeid=9"]
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/3EaqopBnYL-XoDtMI8qQEA?typeid=9"
+        ]
     },
     "6-18": {
         "境外": 1,
@@ -624,6 +627,26 @@
         "校正回歸": {},
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/3A_GxvlYM4wkYEYTlozw6A?typeid=9"
+        ]
+    },
+    "6-25": {
+        "境外": 0,
+        "本土": 76,
+        "死亡": 5,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/9pKIzKzZOpp4HocU3uCl6g?typeid=9"
+        ]
+    },
+    "6-26": {
+        "境外": 2,
+        "本土": 78,
+        "死亡": 13,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/Ve2G8PYEHCAhycgrH0Q1PQ?typeid=9"
         ]
     }
 }
