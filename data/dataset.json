@@ -613,7 +613,7 @@
         "境外": 0,
         "本土": 104,
         "死亡": 24,
-        "備註": [],
+        "備註": ["指揮中心宣佈延長三級警戒再次延長到7月12日"],
         "校正回歸": {},
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/mDFLj0aLsQztMI7vnMSy1w?typeid=9"
@@ -647,6 +647,16 @@
         "校正回歸": {},
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/Ve2G8PYEHCAhycgrH0Q1PQ?typeid=9"
+        ]
+    },
+    "6-27": {
+        "境外": 1,
+        "本土": 88,
+        "死亡": 9,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=CzOFlvhEpIoqdOEuGLOb8A"
         ]
     }
 }
