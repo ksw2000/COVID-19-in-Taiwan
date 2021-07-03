@@ -696,5 +696,25 @@
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=4V7Iv__GIhGG03D1ghBXOQ"
         ]
+    },
+    "7-2": {
+        "境外": 1,
+        "本土": 57,
+        "死亡": 15,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=QdvjM3jxQOYglY2Gp2NgIQ"
+        ]
+    },
+    "7-3": {
+        "境外": 4,
+        "本土": 76,
+        "死亡": 10,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://health.udn.com/health/story/120950/5576013"
+        ]
     }
 }
