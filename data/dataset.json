@@ -716,5 +716,15 @@
         "url": [
             "https://health.udn.com/health/story/120950/5576013"
         ]
+    },
+    "7-4": {
+        "境外": 2,
+        "本土": 37,
+        "死亡": 2,
+        "備註": ["5/15 以來單日確診降至 50 例以下"],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/OlKSN2zbT7JgzxRvLS56dw?typeid=9"
+        ]
     }
 }
