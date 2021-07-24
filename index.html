@@ -31,25 +31,55 @@
     </header>
     <!------------------------------------------>
     <main class="mdc-top-app-bar--fixed-adjust routing-content">
+      <h2>最新資料</h2>
+      <table id="myPieChart-table">
+          <thead>
+            <tr>
+              <th>累計確診總數</th>
+              <th>累計死亡數</th>
+              <th>昨日確診數</th>
+            </tr>
+          </thead>
+            <tbody>
+            <tr>
+              <td data-latest-statistic="累計確診"></td>
+              <td data-latest-statistic="累計死亡"></td>
+              <td data-latest-statistic="昨日確診"></td>
+            </tr>
+          </tbody>
+        </table>
+
       <h2>最近本土確診數</h2>
       <div class="hori-scroll">
-        <canvas id="myChart"></canvas>
+        <canvas id="myChartLatest"></canvas>
       </div>
 
       <h2>最近本土死亡數</h2>
       <div class="hori-scroll">
+        <canvas id="myChartDeathLatest"></canvas>
+      </div>
+
+      <h2>5/11以來本土確診數</h2>
+      <div class="hori-scroll">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <h2>5/11以來本土死亡數</h2>
+      <div class="hori-scroll">
         <canvas id="myChartDeath"></canvas>
       </div>
 
-      <h2>確診趨勢</h2>
-      <div class="hori-scroll">
-        <canvas id="myLineChart"></canvas>
-      </div>
-
-      <h2>死亡趨勢</h2>
-      <div class="hori-scroll">
-        <canvas id="myLineChartDeath"></canvas>
-      </div>
+      <!--
+        <h2>確診趨勢</h2>  
+        <div class="hori-scroll">
+          <canvas id="myLineChart"></canvas>
+        </div>
+        
+        <h2>死亡趨勢</h2>
+        <div class="hori-scroll">
+          <canvas id="myLineChartDeath"></canvas>
+        </div>
+      -->
       
       <h2>5/11 至今確診分佈地區</h2>
       <p>更新日期：<span id="myPieChart-update-date"></span></p>

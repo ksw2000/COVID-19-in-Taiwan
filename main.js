@@ -1,5 +1,5 @@
 // nav bar
-const limit = "5-25"
+const limit = "5-11"
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 
@@ -76,66 +76,81 @@ fetch('./data/dataset.json')
             }
         });
 
-        const myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: '當日發佈數據',
-                    data: confirmed,
-                    backgroundColor: 'rgba(0, 166, 255, 0.8)'
-                }, {
-                    label: '校正回歸',
-                    data: backlog,
-                    backgroundColor: 'rgba(138, 192, 222, 0.8)'
-                }]
-            },
-            options: {
-                scales: {
-                    x: {
-                        stacked: true,
-                    },
-                    y: {
-                        stacked: true,
-                        beginAtZero: true,
-                        min: 0,
-                        max: 600,
-                        ticks: {
-                            // forces step size to be 50 units
-                            stepSize: 100
-                        }
-                    }
+        for(let charts = 0; charts<2; charts++){
+            let from = 0;
+            let to = labels.length;
+            let latest = "";
+            if(charts == 1){
+                latest = "Latest";
+                to = labels.length;
+                from = Math.max(0, to - 30);
+            }
+            new Chart(document.getElementById(`myChart${latest}`).getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels.slice(from, to),
+                    datasets: [{
+                        label: '當日發佈數據',
+                        data: confirmed.slice(from, to),
+                        backgroundColor: 'rgba(0, 166, 255, 0.8)'
+                    }, {
+                        label: '校正回歸',
+                        data: backlog.slice(from, to),
+                        backgroundColor: 'rgba(138, 192, 222, 0.8)'
+                    }]
                 },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            footer: (tooltipItems) => {
-                                let sum = 0;
-                                tooltipItems.forEach((tooltipItem) => {
-                                    sum += tooltipItem.parsed.y;
-                                });
-                                let d = death[tooltipItems[0].parsed.x];
-                                return `總合: ${sum}\n死亡: ${d}`;
-                            },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            min: 0,
+                            ticks: {
+                                // forces step size to be 50 units
+                                // stepSize: 100
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                footer: (tooltipItems) => {
+                                    let sum = 0;
+                                    tooltipItems.forEach((tooltipItem) => {
+                                        sum += tooltipItem.parsed.y;
+                                    });
+                                    let d = death[tooltipItems[0].parsed.x];
+                                    return `總合: ${sum}\n死亡: ${d}`;
+                                },
+                            }
                         }
                     }
                 }
-            }
-        });
+            });
 
-        const lineLabelPlugin = {
-            datalabels: {
-                align: 'end',
-                offset: 10,
-                color: '#505050',
-                //clamp: true,
-                font: {
-                    weight: 'bold'
-                },
-            }, legend: {
-                display: false
-            },
+            new Chart(document.getElementById(`myChartDeath${latest}`).getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels.slice(from, to),
+                    datasets: [{
+                        label: '死亡人數',
+                        data: death.slice(from, to),
+                        backgroundColor: 'rgba(115, 115, 115, 0.8)'
+                    }]
+                }, options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
         }
+        
+        /*
         const myLineChart = new Chart(document.getElementById('myLineChart').getContext('2d'), {
             type: 'line',
             plugins: [ChartDataLabels],
@@ -182,24 +197,7 @@ fetch('./data/dataset.json')
                 }, plugins: lineLabelPlugin
             }
         });
-
-        const myChartDeath = new Chart(document.getElementById('myChartDeath').getContext('2d'), {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: '死亡人數',
-                    data: death,
-                    backgroundColor: 'rgba(115, 115, 115, 0.8)'
-                }]
-            }, options: {
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
+        */
 
         // backlogCounterToList
         let backgroundColorList = [];
@@ -253,11 +251,9 @@ fetch('./data/dataset.json')
 
 
 fetch('./data/city_statistic.json')
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        for (mode = 0; mode < 2; mode++) {
+    .then(res => res.json())
+    .then(data => {
+        for (let mode = 0; mode < 2; mode++) {
             let citys = [];
             let nums = [];
             let proportion = [];
@@ -345,8 +341,18 @@ fetch('./data/city_statistic.json')
                 }
             });
 
-            document.querySelector(`#${dom}-table td[data-party='kmt']`).textContent = parties_num_map["國民黨"] + ' 人';
-            document.querySelector(`#${dom}-table td[data-party='tpp']`).textContent = parties_num_map["民眾黨"] + ' 人';
-            document.querySelector(`#${dom}-table td[data-party='dpp']`).textContent = parties_num_map["民進黨"] + ' 人';
+            document.querySelector(`#${dom}-table td[data-party='kmt']`).textContent = parties_num_map['國民黨'] + ' 人';
+            document.querySelector(`#${dom}-table td[data-party='tpp']`).textContent = parties_num_map['民眾黨'] + ' 人';
+            document.querySelector(`#${dom}-table td[data-party='dpp']`).textContent = parties_num_map['民進黨'] + ' 人';
         }
     });
+
+fetch('./data/latest_statistic.json')
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data);
+        document.querySelector('td[data-latest-statistic="累計確診"]').textContent = data['確診'] + ' 人';
+        document.querySelector('td[data-latest-statistic="累計死亡"]').textContent = data['死亡'] + ' 人';
+        document.querySelector('td[data-latest-statistic="昨日確診"]').textContent = data['昨日確診'] + ' 人';
+    })
+    .catch(err=>console.log(err))
