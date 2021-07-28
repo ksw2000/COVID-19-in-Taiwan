@@ -925,5 +925,45 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/t3y12ZT1GjIsbm_Dv2JWWw?typeid=9"
         ]
+    },
+    "7-25": {
+        "境外": 1,
+        "本土": 22,
+        "死亡": 0,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/VSO1QqYie-snM91eMcxWfA?typeid=9"
+        ]
+    },
+    "7-26": {
+        "境外": 1,
+        "本土": 10,
+        "死亡": 0,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/egbGFxLkDDPMoPvQjqvYKQ?typeid=9"
+        ]
+    },
+    "7-27": {
+        "境外": 1,
+        "本土": 16,
+        "死亡": 1,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/Mi0ksk8-ozOV4-i79xKNdQ?typeid=9"
+        ]
+    },
+    "7-28": {
+        "境外": 2,
+        "本土": 18,
+        "死亡": 0,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/6LQ7LVOsuZNqq2EGjxmBsg?typeid=9"
+        ]
     }
 }
