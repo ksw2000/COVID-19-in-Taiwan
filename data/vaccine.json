@@ -1,0 +1,18 @@
+{
+    "lastModified": "2021/07/29",
+    "data":{
+        "astraZeneca":{
+            "第一劑": 4832152,
+            "第二劑": 261513
+        },
+        "morderna":{
+            "第一劑": 2875678,
+            "第二劑": 119528
+        },
+        "高端": {
+            "第一劑": 0,
+            "第二劑": 0
+        }
+    },
+    "source": "https://www.cdc.gov.tw/File/Get/hPoO23IZ7nhh8SKy3dNHsg"
+}

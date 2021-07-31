@@ -2,16 +2,17 @@
 const limit = "5-11"
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
 MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+const numberFmt = new Intl.NumberFormat('en-US')
 
 // "5-11" -> 511
-function dateToNumber(date){
+function dateToNumber(date) {
     date = date.split("-");
     month = Number(date[0]);
     date = Number(date[1]);
     return {
         month: month,
         date: date,
-        number: month*100+date
+        number: month * 100 + date
     };
 }
 
@@ -53,7 +54,7 @@ fetch('./data/dataset.json')
         let death = [];                     // 本土單日死亡數字
         let backlogCounter = {};            // 本土單日發佈確診加上今日發佈的校正回歸 (不準確的數字)
         Object.keys(data).forEach(date => {
-            if (dateToNumber(date).number >= dateToNumber(limit).number){
+            if (dateToNumber(date).number >= dateToNumber(limit).number) {
                 let confirmedToday = data[date]['本土'];
                 let backlogToday = 0;
                 if (data[date]['校正回歸']) {
@@ -76,11 +77,11 @@ fetch('./data/dataset.json')
             }
         });
 
-        for(let charts = 0; charts<2; charts++){
+        for (let charts = 0; charts < 2; charts++) {
             let from = 0;
             let to = labels.length;
             let latest = "";
-            if(charts == 1){
+            if (charts == 1) {
                 latest = "Latest";
                 to = labels.length;
                 from = Math.max(0, to - 30);
@@ -149,7 +150,7 @@ fetch('./data/dataset.json')
                 }
             });
         }
-        
+
         /*
         const myLineChart = new Chart(document.getElementById('myLineChart').getContext('2d'), {
             type: 'line',
@@ -268,10 +269,10 @@ fetch('./data/city_statistic.json')
                 party = cityToParty[e.city];
                 // 有些 city 的 label 超怪，好像是有亂碼吧
                 // 所以要過濾一下
-                if (party){
-                    if (parties_num_map[party]){
+                if (party) {
+                    if (parties_num_map[party]) {
                         parties_num_map[party] += e.num;
-                    }else{
+                    } else {
                         parties_num_map[party] = e.num;
                     }
 
@@ -310,7 +311,7 @@ fetch('./data/city_statistic.json')
                             'rgb(205, 155, 36)',
                             'rgb(150, 150, 150)'
                         ]
-                    }, ]
+                    },]
                 }, options: {
                     layout: {
                         padding: 50
@@ -340,19 +341,32 @@ fetch('./data/city_statistic.json')
                     }
                 }
             });
-
-            document.querySelector(`#${dom}-table td[data-party='kmt']`).textContent = parties_num_map['國民黨'] + ' 人';
-            document.querySelector(`#${dom}-table td[data-party='tpp']`).textContent = parties_num_map['民眾黨'] + ' 人';
-            document.querySelector(`#${dom}-table td[data-party='dpp']`).textContent = parties_num_map['民進黨'] + ' 人';
+            ['國民黨', '民眾黨', '民進黨'].forEach(e => {
+                let num = numberFmt.format(Number(parties_num_map[e]));
+                document.querySelector(`#${dom}-table td[data-party="${e}"]`).textContent = `${num} 人`;
+            });
         }
     });
 
 fetch('./data/latest_statistic.json')
-    .then(res=>res.json())
-    .then(data=>{
-        console.log(data);
-        document.querySelector('td[data-latest-statistic="累計確診"]').textContent = data['確診'] + ' 人';
-        document.querySelector('td[data-latest-statistic="累計死亡"]').textContent = data['死亡'] + ' 人';
-        document.querySelector('td[data-latest-statistic="昨日確診"]').textContent = data['昨日確診'] + ' 人';
+    .then(res => res.json())
+    .then(data => {
+        ['確診', '死亡', '昨日確診'].forEach(e => {
+            let num = numberFmt.format(Number(data[e]));
+            document.querySelector(`td[data-latest-statistic="${e}"]`).textContent = `${num} 人`;
+        })
     })
-    .catch(err=>console.log(err))
+    .catch(err => console.log(err))
+
+fetch('./data/vaccine.json')
+    .then(res => res.json())
+    .then(data => {
+        document.querySelector('#vaccine-update-date').textContent = `${data.lastModified}`;
+        Object.keys(data.data).forEach(e => {
+            Object.keys(data.data[e]).forEach(f => {
+                let num = numberFmt.format(Number(data.data[e][f]));
+                document.querySelector(`td[data-vaccine="${e}"][data-n="${f}"]`).textContent = `${num} 人次`;
+            });
+        });
+    })
+    .catch(err => console.log(err))

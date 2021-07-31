@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ㄊㄞˊㄨㄢ境內近期ˊㄨˇㄏㄢˋㄈㄟˋㄧㄢˊ疫情數據</title>
+    <title>臺灣近期ˊㄨˇㄏㄢˋ肺炎疫情數據</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -15,39 +15,38 @@
     <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <span class="mdc-top-app-bar__title">ㄨˇㄏㄢˋㄈㄟˋㄧㄢˊ疫情數據</span>
-        </section>
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-          <button class="mdc-button white-text-button" id="nav-project-button">
-            <span class="mdc-button__ripple"></span>
-           <span class="mdc-button__label">Project</span>
-          </button>
-          <button class="mdc-button white-text-button" id="nav-contact-button">
-            <span class="mdc-button__ripple"></span>
-           <span class="mdc-button__label">Contact</span>
-          </button>
+          <span class="mdc-top-app-bar__title">ㄨˇㄏㄢˋ肺炎疫情數據</span>
         </section>
       </div>
     </header>
     <!------------------------------------------>
     <main class="mdc-top-app-bar--fixed-adjust routing-content">
-      <h2>最新資料</h2>
-      <table id="myPieChart-table">
-          <thead>
-            <tr>
-              <th>累計確診總數</th>
-              <th>累計死亡數</th>
-              <th>昨日確診數</th>
-            </tr>
-          </thead>
-            <tbody>
-            <tr>
-              <td data-latest-statistic="累計確診"></td>
-              <td data-latest-statistic="累計死亡"></td>
-              <td data-latest-statistic="昨日確診"></td>
-            </tr>
-          </tbody>
-        </table>
+      <h2>疫苗數據</h2>
+      <table>
+        <p>更新日期：<span id="vaccine-update-date"></span></p>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>AZ</th>
+            <th>莫德納</th>
+            <th>高端</th>
+          </tr>
+        </thead>
+          <tbody>
+          <tr>
+            <td>第一劑</td>
+            <td data-vaccine="astraZeneca" data-n="第一劑">-</td>
+            <td data-vaccine="morderna" data-n="第一劑">-</td>
+            <td data-vaccine="高端" data-n="第一劑">-</td>
+          </tr>
+          <tr>
+            <td>第二劑</td>
+            <td data-vaccine="astraZeneca" data-n="第二劑">-</td>
+            <td data-vaccine="morderna" data-n="第二劑">-</td>
+            <td data-vaccine="高端" data-n="第二劑">-</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2>最近本土確診數</h2>
       <div class="hori-scroll">
@@ -99,9 +98,9 @@
             <tbody>
             <tr>
               <td>人數</td>
-              <td data-party="kmt"></td>
-              <td data-party="tpp"></td>
-              <td data-party="dpp"></td>
+              <td data-party="國民黨">-</td>
+              <td data-party="民眾黨">-</td>
+              <td data-party="民進黨">-</td>
             </tr>
           </tbody>
         </table>
@@ -125,9 +124,9 @@
             <tbody>
             <tr>
               <td>人數</td>
-              <td data-party="kmt"></td>
-              <td data-party="tpp"></td>
-              <td data-party="dpp"></td>
+              <td data-party="國民黨">-</td>
+              <td data-party="民眾黨">-</td>
+              <td data-party="民進黨">-</td>
             </tr>
           </tbody>
         </table>
@@ -138,6 +137,25 @@
       <div class="hori-scroll">
         <canvas id="myChartSingleDay"></canvas>
       </div>
+      
+      <h2>統計</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>累計確診總數</th>
+            <th>累計死亡數</th>
+            <th>昨日確診數</th>
+          </tr>
+        </thead>
+          <tbody>
+          <tr>
+            <td data-latest-statistic="確診"></td>
+            <td data-latest-statistic="死亡"></td>
+            <td data-latest-statistic="昨日確診"></td>
+          </tr>
+        </tbody>
+      </table>
+
       <hr>
 
       <a href="https://github.com/liao2000/Wuuuuhaaaan-virus-in-Taiwan"><img alt="github repository" src="https://img.shields.io/badge/repositories-Wuuuuhaaaan--virus--in--Taiwan-brightgreen?logo=github"></a>
