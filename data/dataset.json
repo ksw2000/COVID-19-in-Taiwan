@@ -1007,13 +1007,24 @@
         ]
     },
     "8-2": {
-        "境外": 3,
-        "本土": 16,
+        "境外": 2,
+        "本土": 12,
         "死亡": 0,
         "備註": [],
         "校正回歸": {},
         "url": [
-            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=DY-FVbUu8CSZM8in_1ZMtg"
+            "https://www.cdc.gov.tw/Bulletin/Detail/brwb9yZ4DBf5cD191r_qwg?typeid=9"
+        ]
+    },
+    "8-3": {
+        "境外": 3,
+        "本土": 16,
+        "死亡": 2,
+        "備註": ["新北市與台北市開放餐飲業內用"],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=DY-FVbUu8CSZM8in_1ZMtg",
+            "https://udn.com/news/story/122173/5644668"
         ]
     }
 }
