@@ -1023,8 +1023,78 @@
         "備註": ["新北市與台北市開放餐飲業內用"],
         "校正回歸": {},
         "url": [
-            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=DY-FVbUu8CSZM8in_1ZMtg",
+            "https://www.cdc.gov.tw/Bulletin/Detail/DY-FVbUu8CSZM8in_1ZMtg?typeid=9",
             "https://udn.com/news/story/122173/5644668"
+        ]
+    },
+    "8-4": {
+        "境外": 1,
+        "本土": 20,
+        "死亡": 0,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/NehaPSl3BKRwvHBo5_eSHw?typeid=9"
+        ]
+    },
+    "8-5": {
+        "境外": 5,
+        "本土": 6,
+        "死亡": 0,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/kYO4SKzwdY_NFeeBFlg-VQ?typeid=9"
+        ]
+    },
+    "8-6": {
+        "境外": 2,
+        "本土": 10,
+        "死亡": 3,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/bv-PSugy2Wnhnn4oUPWdfw?typeid=9"
+        ]
+    },
+    "8-7": {
+        "境外": 4,
+        "本土": 6,
+        "死亡": 12,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/rEkGqTzLoF3TtCb1mBaaSg?typeid=9"
+        ]
+    },
+    "8-8": {
+        "境外": 3,
+        "本土": 4,
+        "死亡": 3,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/z7XCUKlXoubnJKPp0gzpng?typeid=9"
+        ]
+    },
+    "8-9": {
+        "境外": 4,
+        "本土": 4,
+        "死亡": 4,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/QHHV7y8uMR4ZjqB6CnjwjQ?typeid=9"
+        ]
+    },
+    "8-10": {
+        "境外": 5,
+        "本土": 3,
+        "死亡": 1,
+        "備註": [],
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/wmThnLvTBe8aSq-XJfi7Hw?typeid=9"
         ]
     }
 }
