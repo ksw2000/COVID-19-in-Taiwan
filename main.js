@@ -49,6 +49,7 @@ fetch('./data/dataset.json')
     .then((data) => {
         let labels = [];
         let confirmed = [];                 // 本土單日確診
+        let confirmedForeign = [];          // 境外移入單日確診
         let backlog = [];                   // 本土單日校正回歸
         let confirmedAfterBackLog = [];     // 本土單日確診加上之後的校正回歸 (最準確的數字)
         let death = [];                     // 本土單日死亡數字
@@ -56,6 +57,7 @@ fetch('./data/dataset.json')
         Object.keys(data).forEach(date => {
             if (dateToNumber(date).number >= dateToNumber(limit).number) {
                 let confirmedToday = data[date]['本土'];
+                let confirmedTodayForeign = data[date]['境外'];
                 let backlogToday = 0;
                 if (data[date]['校正回歸']) {
                     Object.keys(data[date]['校正回歸']).forEach((key) => {
@@ -71,6 +73,7 @@ fetch('./data/dataset.json')
                 // push
                 labels.push(date);
                 confirmed.push(confirmedToday);
+                confirmedForeign.push(confirmedTodayForeign);
                 backlog.push(backlogToday);
                 confirmedAfterBackLog.push(confirmedToday + backlogToday);
                 death.push((data[date]['死亡']) ? data[date]['死亡'] : 0);
@@ -94,6 +97,10 @@ fetch('./data/dataset.json')
                         label: '當日發佈數據',
                         data: confirmed.slice(from, to),
                         backgroundColor: 'rgba(0, 166, 255, 0.8)'
+                    }, {
+                        label: '境外移入',
+                        data: confirmedForeign.slice(from, to),
+                        backgroundColor: 'rgba(66, 206, 245, 0.8)'
                     }, {
                         label: '校正回歸',
                         data: backlog.slice(from, to),
@@ -150,55 +157,6 @@ fetch('./data/dataset.json')
                 }
             });
         }
-
-        /*
-        const myLineChart = new Chart(document.getElementById('myLineChart').getContext('2d'), {
-            type: 'line',
-            plugins: [ChartDataLabels],
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: '確診數',
-                    data: confirmedAfterBackLog,
-                    backgroundColor: 'rgba(0, 166, 255, 0.8)'
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        min: 0,
-                        max: 600,
-                        ticks: {
-                            stepSize: 20
-                        }
-                    }
-                }, plugins: lineLabelPlugin
-            }
-        });
-
-        const myLineChartDeath = new Chart(document.getElementById('myLineChartDeath').getContext('2d'), {
-            type: 'line',
-            plugins: [ChartDataLabels],
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: '死亡數',
-                    data: death,
-                    backgroundColor: 'rgba(255, 74, 74, 0.8)'
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        min: 0,
-                        max: 50
-                    }
-                }, plugins: lineLabelPlugin
-            }
-        });
-        */
 
         // backlogCounterToList
         let backgroundColorList = [];
