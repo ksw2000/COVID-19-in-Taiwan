@@ -94,7 +94,7 @@ fetch('./data/dataset.json')
                 data: {
                     labels: labels.slice(from, to),
                     datasets: [{
-                        label: '當日發佈數據',
+                        label: '本土確診',
                         data: confirmed.slice(from, to),
                         backgroundColor: 'rgba(0, 166, 255, 0.8)'
                     }, {
