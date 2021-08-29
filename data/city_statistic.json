@@ -1,5 +1,5 @@
 {
-	"lastModified": "20210828-18:15",
+	"lastModified": "20210829-06:16",
 	"dataList": {
 		"from511": [
 			{
@@ -111,28 +111,28 @@
 		"before14": [
 			{
 				"city": "新北市",
-				"num": 24,
-				"proportion": 0.5714285714285714
+				"num": 23,
+				"proportion": 0.575
 			},
 			{
 				"city": "台北市",
-				"num": 14,
-				"proportion": 0.3333333333333333
+				"num": 13,
+				"proportion": 0.325
 			},
 			{
 				"city": "桃園市",
 				"num": 2,
-				"proportion": 0.047619047619047616
+				"proportion": 0.05
 			},
 			{
 				"city": "雲林縣",
 				"num": 1,
-				"proportion": 0.023809523809523808
+				"proportion": 0.025
 			},
 			{
 				"city": "彰化縣",
 				"num": 1,
-				"proportion": 0.023809523809523808
+				"proportion": 0.025
 			}
 		]
 	}
