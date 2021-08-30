@@ -1241,10 +1241,57 @@
         "境外": 1,
         "本土": 0,
         "死亡": 1,
-        "備註": ["5/11 以來第一次本土零確診"],
+        "備註": [
+            "5/11 以來第一次本土零確診"
+        ],
         "校正回歸": {},
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/uqw6Rnia5LLT408IUDG9Bw?typeid=9"
+        ]
+    },
+    "8-26": {
+        "境外": 6,
+        "本土": 2,
+        "死亡": 2,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/MCsgPQYHX-7Y1rwdp37gRg?typeid=9"
+        ]
+    },
+    "8-27": {
+        "境外": 7,
+        "本土": 0,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/HlZnsSTec4DWLUImDV3zSA?typeid=9"
+        ]
+    },
+    "8-28": {
+        "境外": 6,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/A8sZbjImqVaGG7Xktvmigg?typeid=9"
+        ]
+    },
+    "8-29": {
+        "境外": 10,
+        "本土": 13,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/HJD22rw3XEPUcz_Vz-75Ug?typeid=9"
+        ]
+    },
+    "8-30": {
+        "境外": 5,
+        "本土": 3,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/z1vVcNoM5rtpdCLtlpI53w?typeid=9"
         ]
     }
 }
