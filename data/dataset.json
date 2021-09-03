@@ -1293,5 +1293,41 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/z1vVcNoM5rtpdCLtlpI53w?typeid=9"
         ]
+    },
+    "8-31": {
+        "境外": 1,
+        "本土": 3,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/xs4MNour4QiZwwMnVfvpKw?typeid=9"
+        ]
+    },
+    "9-1": {
+        "境外": 5,
+        "本土": 1,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/vFdpdZiD4vB9xXW_jqDIoQ?typeid=9"
+        ]
+    },
+    "9-2": {
+        "境外": 4,
+        "本土": 1,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/qcMPRG9-1Dg7e7wt43OkCQ?typeid=9"
+        ]
+    },
+    "9-3": {
+        "境外": 4,
+        "本土": 2,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/VICcPtkDqUlO9WAGsm8BTw?typeid=9"
+        ]
     }
 }
