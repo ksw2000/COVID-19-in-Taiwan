@@ -7,7 +7,11 @@ function dateConvert(str) {
 }
 
 // get data from CDC
-https.get('https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.json', (res) => {
+https.get({
+    hostname: 'od.cdc.gov.tw',
+    path: '/eic/Day_Confirmation_Age_County_Gender_19CoV.json',
+    rejectUnauthorized: false
+}, (res) => {
     let buffers = [];
     let size = 0;
     res.on('data', chunk => {
@@ -111,7 +115,11 @@ function oneLineCSVParser(str) {
     return res;
 }
 
-https.get('https://od.cdc.gov.tw/eic/covid19/covid19_tw_stats.csv', (res) => {
+https.get({
+    hostname: 'od.cdc.gov.tw',
+    path: '/eic/covid19/covid19_tw_stats.csv',
+    rejectUnauthorized: false
+}, res => {
     let buffers = [];
     res.on('data', chunk => {
         buffers += chunk;
