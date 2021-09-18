@@ -1383,5 +1383,86 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/H474DjVcjn1Ua2xWWumCzg?typeid=9"
         ]
+    },
+    "9-10": {
+        "境外": 5,
+        "本土": 2,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=rFB5EmwGsyKbpr0QYSaR1Q"
+        ]
+    },
+    "9-11": {
+        "境外": 5,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=89ILPvj_5_ARiqy8oyLQ4A"
+        ]
+    },
+    "9-12": {
+        "境外": 11,
+        "本土": 3,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=E0VoYSp-VY8DMzE7-9uPUw"
+        ]
+    },
+    "9-13": {
+        "境外": 3,
+        "本土": 2,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=B3jVw1ZBkJ0AUo5p0q6AoQ"
+        ]
+    },
+    "9-14": {
+        "境外": 3,
+        "本土": 2,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=W196H8qkJGfIOVIQAJ-jeA"
+        ]
+    },
+    "9-15": {
+        "境外": 4,
+        "本土": 1,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=G37NdiMeLNMQr3kLi-uqcA"
+        ]
+    },
+    "9-16": {
+        "境外": 10,
+        "本土": 2,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=fy_t3gfUfNGM6x-CR6q22A"
+        ]
+    },
+    "9-17": {
+        "境外": 6,
+        "本土": 2,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=byygl_Vhc802F19_JQAN2w"
+        ]
+    },
+    "9-18": {
+        "境外": 6,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=RQSCG-SwBUPv7bRP1Sp5OA"
+        ]
     }
 }
