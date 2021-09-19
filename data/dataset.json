@@ -1464,5 +1464,14 @@
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=RQSCG-SwBUPv7bRP1Sp5OA"
         ]
+    },
+    "9-19": {
+        "境外": 11,
+        "本土": 1,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=spDFzUjv7sA2pSWp0bPXnw"
+        ]
     }
 }
