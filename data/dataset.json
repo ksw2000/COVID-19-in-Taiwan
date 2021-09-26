@@ -1518,5 +1518,23 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/BeJbnf4Gy3nJ7PjffmsTNw?typeid=9"
         ]
+    },
+    "9-25": {
+        "境外": 5,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/34GeLdP78XzJsFAHGl9XOg?typeid=9"
+        ]
+    },
+    "9-26": {
+        "境外": 8,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/xR-r-CHqTrZNlG7UU7WORw?typeid=9"
+        ]
     }
 }
