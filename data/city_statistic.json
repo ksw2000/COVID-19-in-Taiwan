@@ -1,5 +1,5 @@
 {
-	"lastModified": "20210925-18:15",
+	"lastModified": "20210926-06:16",
 	"dataList": {
 		"from511": [
 			{
@@ -111,18 +111,18 @@
 		"before14": [
 			{
 				"city": "新北市",
-				"num": 7,
-				"proportion": 0.4666666666666667
+				"num": 6,
+				"proportion": 0.5
 			},
 			{
 				"city": "台北市",
-				"num": 5,
+				"num": 4,
 				"proportion": 0.3333333333333333
 			},
 			{
 				"city": "桃園市",
-				"num": 3,
-				"proportion": 0.2
+				"num": 2,
+				"proportion": 0.16666666666666666
 			}
 		]
 	}
