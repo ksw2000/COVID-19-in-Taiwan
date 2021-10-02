@@ -1536,5 +1536,59 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/xR-r-CHqTrZNlG7UU7WORw?typeid=9"
         ]
+    },
+    "9-27": {
+        "境外": 9,
+        "本土": 0,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/SWkS7zioiivG05EwhTRIdw?typeid=9"
+        ]
+    },
+    "9-28": {
+        "境外": 6,
+        "本土": 1,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/0TamZE7n-zBmWI_AwB0YAA?typeid=9"
+        ]
+    },
+    "9-29": {
+        "境外": 10,
+        "本土": 1,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/uinfYYZrKS-Z9GWKesNeWw?typeid=9"
+        ]
+    },
+    "9-30": {
+        "境外": 7,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/NRd_o6H5xQtRZLoN-mFxJg?typeid=9"
+        ]
+    },
+    "10-1": {
+        "境外": 11,
+        "本土": 0,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/9Nq0yfsmkMVoQUbgvwXkLQ?typeid=9"
+        ]
+    },
+    "10-2": {
+        "境外": 10,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=VkiSUyDBRyb0iFwAd8jbTw"
+        ]
     }
 }
