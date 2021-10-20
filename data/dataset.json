@@ -1709,12 +1709,48 @@
         ]
     },
     "10-16": {
-        "境外": 1,
-        "本土": 10,
+        "境外": 10,
+        "本土": 1,
         "死亡": 0,
         "校正回歸": {},
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/XHzF4S_XWWjWrlap0qLnRw?typeid=9"
+        ]
+    },
+    "10-17": {
+        "境外": 1,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/3PM-PVB3sl_RxAu0LGFpCw?typeid=9"
+        ]
+    }
+    ,"10-18": {
+        "境外": 0,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://tw.news.yahoo.com/%E6%9A%8C%E9%81%95193%E5%A4%A9-%E5%9C%8B%E5%85%A710-18%E6%96%B0%E5%86%A0%E7%A2%BA%E8%A8%BA%E7%B5%82%E6%96%BC0%E6%9C%AC%E5%9C%9F0%E5%A2%83%E5%A4%960%E6%AD%BB%E4%BA%A1-072947306.html"
+        ]
+    },
+    "10-19": {
+        "境外": 5,
+        "本土": 1,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/JsYTbSiR4leDCc4Z4UEpOw?typeid=9"
+        ]
+    },
+    "10-20": {
+        "境外": 4,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/5QRtVxVkbaRyRjgiPJu20A?typeid=9"
         ]
     }
 }
