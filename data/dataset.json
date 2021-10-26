@@ -1788,5 +1788,14 @@
         "url": [
             "https://www.cdc.gov.tw/Bulletin/Detail/vkImtBDtU2_jbTgacFOz9A?typeid=9"
         ]
+    },
+    "10-25": {
+        "境外": 6,
+        "本土": 2,
+        "死亡": 1,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/Lx3sB2ewKakvoBnsqS7O9Q?typeid=9"
+        ]
     }
 }
