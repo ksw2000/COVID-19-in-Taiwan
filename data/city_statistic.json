@@ -1,128 +1,133 @@
 {
-	"lastModified": "20211104-06:17",
+	"lastModified": "20211104-18:17",
 	"dataList": {
 		"from511": [
 			{
 				"city": "新北市",
 				"num": 4759,
-				"proportion": 0.46620297805642635
+				"proportion": 0.4661573121755314
 			},
 			{
 				"city": "台北市",
 				"num": 3171,
-				"proportion": 0.3106387147335423
+				"proportion": 0.31060828680575964
 			},
 			{
 				"city": "桃園市",
 				"num": 706,
-				"proportion": 0.06916144200626959
+				"proportion": 0.06915466745028896
 			},
 			{
 				"city": "基隆市",
 				"num": 304,
-				"proportion": 0.029780564263322883
+				"proportion": 0.029777647174062102
 			},
 			{
 				"city": "彰化縣",
 				"num": 252,
-				"proportion": 0.02468652037617555
+				"proportion": 0.024684102262709375
 			},
 			{
 				"city": "苗栗縣",
 				"num": 211,
-				"proportion": 0.020670062695924765
+				"proportion": 0.02066803800568126
 			},
 			{
 				"city": "台中市",
 				"num": 197,
-				"proportion": 0.01929858934169279
+				"proportion": 0.019296698991086297
 			},
 			{
 				"city": "新竹縣",
 				"num": 96,
-				"proportion": 0.009404388714733543
+				"proportion": 0.009403467528651191
 			},
 			{
 				"city": "宜蘭縣",
-				"num": 95,
-				"proportion": 0.009306426332288401
+				"num": 96,
+				"proportion": 0.009403467528651191
 			},
 			{
 				"city": "高雄市",
 				"num": 93,
-				"proportion": 0.00911050156739812
+				"proportion": 0.00910960916838084
 			},
 			{
 				"city": "花蓮縣",
 				"num": 63,
-				"proportion": 0.006171630094043887
+				"proportion": 0.006171025565677344
 			},
 			{
 				"city": "屏東縣",
 				"num": 47,
-				"proportion": 0.00460423197492163
+				"proportion": 0.0046037809775688115
 			},
 			{
 				"city": "台南市",
 				"num": 47,
-				"proportion": 0.00460423197492163
+				"proportion": 0.0046037809775688115
 			},
 			{
 				"city": "新竹市",
 				"num": 39,
-				"proportion": 0.0038205329153605016
+				"proportion": 0.003820158683514546
 			},
 			{
 				"city": "南投縣",
 				"num": 34,
-				"proportion": 0.0033307210031347963
+				"proportion": 0.00333039474973063
 			},
 			{
 				"city": "嘉義縣",
 				"num": 31,
-				"proportion": 0.003036833855799373
+				"proportion": 0.0030365363894602803
 			},
 			{
 				"city": "台東縣",
 				"num": 22,
-				"proportion": 0.0021551724137931034
+				"proportion": 0.002154961308649231
 			},
 			{
 				"city": "雲林縣",
 				"num": 22,
-				"proportion": 0.0021551724137931034
+				"proportion": 0.002154961308649231
 			},
 			{
 				"city": "嘉義市",
 				"num": 10,
-				"proportion": 0.0009796238244514106
+				"proportion": 0.0009795278675678322
 			},
 			{
 				"city": "澎湖縣",
 				"num": 5,
-				"proportion": 0.0004898119122257053
+				"proportion": 0.0004897639337839161
 			},
 			{
 				"city": "連江縣",
 				"num": 4,
-				"proportion": 0.00039184952978056425
+				"proportion": 0.0003918111470271329
 			}
 		],
 		"before14": [
 			{
 				"city": "基隆市",
 				"num": 2,
-				"proportion": 0.5
+				"proportion": 0.4
+			},
+			{
+				"city": "宜蘭縣",
+				"num": 1,
+				"proportion": 0.2
 			},
 			{
 				"city": "新北市",
 				"num": 1,
-				"proportion": 0.25
+				"proportion": 0.2
 			},
 			{
 				"city": "台北市",
 				"num": 1,
-				"proportion": 0.25
+				"proportion": 0.2
 			}
 		]
 	}
