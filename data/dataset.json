@@ -2121,5 +2121,32 @@
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=K4mTgO4hBZ97ER1dRHGqxQ"
         ]
+    },
+    "12-1": {
+        "境外": 8,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=GrUNWEYBePWBA55X5f08Fg"
+        ]
+    },
+    "12-2": {
+        "境外": 17,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=TejSFjyPpHPOxcpKU26DyQ"
+        ]
+    },
+    "12-3": {
+        "境外": 11,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Np-A0yrPBcpPrd8Kd2z18A"
+        ]
     }
 }
