@@ -2157,5 +2157,69 @@
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=j64gUcFiy8FFvnjgoM5oyw"
         ]
+    },
+    "12-5": {
+        "境外": 4,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=QyP53F_Wz5w2aH-FyMZoYA"
+        ]
+    },
+    "12-6": {
+        "境外": 10,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=XIxEY8HS7u87sxrY5rsZcw"
+        ]
+    },
+    "12-7": {
+        "境外": 21,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=DkHH9jmlqsuArel0Ge54ig"
+        ]
+    },
+    "12-8": {
+        "境外": 5,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Cw2WizvTzxs1dNf94r8Fnw"
+        ]
+    },
+    "12-9": {
+        "境外": 16,
+        "本土": 1,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=M6sT3rx4Rd7QcDxcnCG8ow",
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=o-9C7vcqy3glqLxfaZr0rA"
+        ]
+    },
+    "12-10": {
+        "境外": 16,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=UN5fQgp3h2gfyNntP6ouCQ"
+        ]
+    },
+    "12-11": {
+        "境外": 10,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=ruOWq6GTSZGSOq38yIgd3w"
+        ]
     }
 }
