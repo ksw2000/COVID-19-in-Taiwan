@@ -1,37 +1,37 @@
-body{
+body {
   margin: 0px;
   padding: 0px;
 }
 
-main{
+main {
   box-sizing: border-box;
   display: block;
   margin: 0px auto;
   max-width: 800px;
-  padding:10px 20px;
+  padding: 10px 20px;
   width: 100%;
 }
 
-canvas{
-    height: 250px;
-    margin: 0px auto;
-    width: 100%;
-    min-width: 500px;
+canvas {
+  height: 250px;
+  margin: 0px auto;
+  width: 100%;
+  min-width: 500px;
 }
 
-.hori-scroll{
+.hori-scroll {
   width: 100%;
   overflow-y: auto;
 }
 
-.cetner{
+.cetner {
   display: block;
   margin: auto;
   width: 100%;
 }
 
-:root{
-  --mdc-theme-primary: #171213;
+:root {
+  --mdc-theme-primary: #1b4e57;
   --mdc-theme-secondary: #018786;
   --mdc-theme-background: #d8d8d8;
   --mdc-theme-surface: #fff;
@@ -57,24 +57,29 @@ canvas{
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5)
 }
 
-table{
+.table-wrap{
+  overflow-x: auto;
+}
+
+table {
   border-collapse: collapse;
   box-sizing: border-box;
   padding: 0px 10px;
   width: 100%;
 }
 
-tr{
+tr {
   color: var(--mdc-theme-secondary);
   text-align: center;
 }
 
-th{
+th {
   background-color: var(--mdc-theme-secondary);
   color: var(--mdc-theme-on-primary);
 }
 
-td, th{
+td, th {
   border: 1px solid var(--mdc-theme-secondary);
-  padding: 10px 0px;
+  padding: 10px;
+  white-space: nowrap;
 }

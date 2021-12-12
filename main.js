@@ -320,7 +320,7 @@ fetch('./data/vaccine.json')
     .then(res => res.json())
     .then(data => {
         document.querySelector('#vaccine-update-date').textContent = `${data.lastModified}`;
-        let sum = {"第一劑": 0, "第二劑": 1};
+        let sum = {"第一劑": 0, "第二劑": 0, "追加劑": 0};
         Object.keys(data.data).forEach(e => {
             Object.keys(data.data[e]).forEach(f => {
                 sum[f] += Number(data.data[e][f]);
@@ -332,5 +332,6 @@ fetch('./data/vaccine.json')
         console.log(sum);
         document.querySelector(`td[data-vaccine="sum"][data-n="第一劑"]`).innerHTML = `${numberFmt.format(sum['第一劑'])} 人次<br>約占總人口 ${(sum['第一劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
         document.querySelector(`td[data-vaccine="sum"][data-n="第二劑"]`).innerHTML = `${numberFmt.format(sum['第二劑'])} 人次<br>約占總人口 ${(sum['第二劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
+        document.querySelector(`td[data-vaccine="sum"][data-n="追加劑"]`).innerHTML = `${numberFmt.format(sum['追加劑'])} 人次<br>約占總人口 ${(sum['追加劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
     })
     .catch(err => console.log(err))

@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>臺灣近期COVID-19疫情數據</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="main.css?20210615">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"></script>
-    <script src="main.js?20210826" defer></script>
-  </head>
-  <body>
-    <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
-      <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <span class="mdc-top-app-bar__title">COVID-19疫情數據</span>
-        </section>
-      </div>
-    </header>
-    <!------------------------------------------>
-    <main class="mdc-top-app-bar--fixed-adjust routing-content">
-      <h2>疫苗數據</h2>
+
+<head>
+  <title>臺灣近期COVID-19疫情數據</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="main.css?20210615">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"></script>
+  <script src="main.js?20210826" defer></script>
+</head>
+
+<body>
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <span class="mdc-top-app-bar__title">COVID-19疫情數據</span>
+      </section>
+    </div>
+  </header>
+  <!------------------------------------------>
+  <main class="mdc-top-app-bar--fixed-adjust routing-content">
+    <h2>疫苗數據</h2>
+    <a href="https://github.com/liao2000/COVID-19-in-Taiwan"><img alt="Repository"
+        src="https://img.shields.io/badge/@liao2000-COVID--19--in--Taiwan-blue?logo=github&style=flat-square"></a>
+
+    <a href="https://github.com/liao2000/COVID-19-in-Taiwan/issues"><img alt="Issue"
+        src="https://img.shields.io/github/issues/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
+
+    <a href="https://github.com/liao2000/COVID-19-in-Taiwan/blob/main/LICENSE"><img alt="License"
+        src="https://img.shields.io/github/license/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
+    <div class="table-wrap">
       <table>
         <p>更新日期：<span id="vaccine-update-date"></span></p>
         <thead>
@@ -34,7 +46,7 @@
             <th>合計</th>
           </tr>
         </thead>
-          <tbody>
+        <tbody>
           <tr>
             <td>第一劑</td>
             <td data-vaccine="astraZeneca" data-n="第一劑">-</td>
@@ -51,44 +63,55 @@
             <td data-vaccine="biontech" data-n="第二劑">-</td>
             <td data-vaccine="sum" data-n="第二劑">-</td>
           </tr>
+          <tr>
+            <td>追加劑</td>
+            <td data-vaccine="astraZeneca" data-n="追加劑">-</td>
+            <td data-vaccine="morderna" data-n="追加劑">-</td>
+            <td data-vaccine="高端" data-n="追加劑">-</td>
+            <td data-vaccine="biontech" data-n="追加劑">-</td>
+            <td data-vaccine="sum" data-n="追加劑">-</td>
+          </tr>
         </tbody>
       </table>
+    </div>
 
-      <h2>近日確診數</h2>
+    <h2>近日確診數</h2>
+    <div class="hori-scroll">
+      <canvas id="myChartLatest"></canvas>
+    </div>
+
+    <!--最近比較穩定先不渲染-->
+    <div style="display: none;">
+      <h2>近日死亡數</h2>
       <div class="hori-scroll">
-        <canvas id="myChartLatest"></canvas>
+        <canvas id="myChartDeathLatest"></canvas>
       </div>
-
-      <!--最近比較穩定先不渲染-->
-      <div style="display: none;">
-        <h2>近日死亡數</h2>
-        <div class="hori-scroll">
-          <canvas id="myChartDeathLatest"></canvas>
-        </div>
-      </div>
-
-      <h2>5/11以來確診統計</h2>
+    </div>
+    
+    <h2>5/11以來確診統計</h2>
+    <div class="hori-scroll">
+      <canvas id="myChart"></canvas>
+    </div>
+    
+    <h2>5/11以來死亡統計</h2>
+    <div class="hori-scroll">
+      <canvas id="myChartDeath"></canvas>
+    </div>
+    
+    <!--
+      <h2>確診趨勢</h2>  
       <div class="hori-scroll">
-        <canvas id="myChart"></canvas>
+        <canvas id="myLineChart"></canvas>
       </div>
-
-      <h2>5/11以來死亡統計</h2>
-      <div class="hori-scroll">
-        <canvas id="myChartDeath"></canvas>
-      </div>
-
-      <!--
-        <h2>確診趨勢</h2>  
-        <div class="hori-scroll">
-          <canvas id="myLineChart"></canvas>
-        </div>
-        
-        <h2>死亡趨勢</h2>
-        <div class="hori-scroll">
-          <canvas id="myLineChartDeath"></canvas>
-        </div>
-      -->
       
+      <h2>死亡趨勢</h2>
+      <div class="hori-scroll">
+        <canvas id="myLineChartDeath"></canvas>
+      </div>
+    -->
+    
+    <!--最近比較穩定先不渲染-->
+    <div style="display: none;">
       <h2>5/11 至今確診者分佈地區</h2>
       <p>更新日期：<span id="myPieChart-update-date"></span></p>
       <div class="hori-scroll">
@@ -103,7 +126,7 @@
               <th>民主進步黨</th>
             </tr>
           </thead>
-            <tbody>
+          <tbody>
             <tr>
               <td>人數</td>
               <td data-party="國民黨">-</td>
@@ -113,7 +136,7 @@
           </tbody>
         </table>
       </div>
-      
+
       <h2>近 14 日確診者分佈地區</h2>
       <p>更新日期：<span id="myPieChart-14-update-date"></span></p>
       <p>不排除康復者及死亡個案，因為找不到資料</p>
@@ -129,7 +152,7 @@
               <th>民主進步黨</th>
             </tr>
           </thead>
-            <tbody>
+          <tbody>
             <tr>
               <td>人數</td>
               <td data-party="國民黨">-</td>
@@ -139,14 +162,16 @@
           </tbody>
         </table>
       </div>
+    </div>
 
-      <h2>單日發佈確診總數</h2>
-      <p>確診數 + 當日所發佈之校正迴歸數量 (外媒所採用之數據)</p>
-      <div class="hori-scroll">
-        <canvas id="myChartSingleDay"></canvas>
-      </div>
-      
-      <h2>統計</h2>
+    <h2>單日發佈確診總數</h2>
+    <p>確診數 + 當日所發佈之校正迴歸數量 (外媒所採用之數據)</p>
+    <div class="hori-scroll">
+      <canvas id="myChartSingleDay"></canvas>
+    </div>
+
+    <h2>統計</h2>
+    <div class="table-wrap">
       <table>
         <thead>
           <tr>
@@ -155,7 +180,7 @@
             <th>昨日確診數</th>
           </tr>
         </thead>
-          <tbody>
+        <tbody>
           <tr>
             <td data-latest-statistic="確診"></td>
             <td data-latest-statistic="死亡"></td>
@@ -163,14 +188,13 @@
           </tr>
         </tbody>
       </table>
+    </div>
 
-      <hr>
+    <hr>
+    <div class="center">
+      <img src="https://i.imgur.com/pubNv6P.gif" style="width: 100%; max-width:1240px;">
+    </div>
+  </main>
+</body>
 
-      <a href="https://github.com/liao2000/COVID-19-in-Taiwan"><img alt="github repository" src="https://img.shields.io/badge/repositories-COVID--19--in--Taiwan-brightgreen?logo=github"></a>
-      <p>數據若有誤可以發<a href="https://github.com/liao2000/COVID-19-in-Taiwan/pulls">pull request</a></p>
-      <div class="center">
-        <img src="https://i.imgur.com/pubNv6P.gif" style="width: 100%; max-width:1240px;">
-      </div>
-    </main>
-    </body>
 </html>
