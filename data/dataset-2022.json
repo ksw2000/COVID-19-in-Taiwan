@@ -1,0 +1,74 @@
+{
+    "1-1": {
+        "境外": 41,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cna.com.tw/news/firstnews/202201010016.aspx"
+        ]
+    },
+    "1-2": {
+        "境外": 20,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.taiwannews.com.tw/ch/news/4395774"
+        ]
+    },
+    "1-3": {
+        "境外": 25,
+        "本土": 0,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Bulletin/Detail/wPYoUO5Fv8bYEL0fGvlwrw?typeid=9"
+        ]
+    },
+    "1-4": {
+        "境外": 30,
+        "本土": 4,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cna.com.tw/news/firstnews/202201040038.aspx"
+        ]
+    },
+    "1-5": {
+        "境外": 25,
+        "本土": 1,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cna.com.tw/news/firstnews/202201040038.aspx"
+        ]
+    },
+    "1-6": {
+        "境外": 40,
+        "本土": 3,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=09VZRAwn1bOg97wX7spbLw"
+        ]
+    },
+    "1-7": {
+        "境外": 58,
+        "本土": 4,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=szV5W2pK70cBBVpTxxghzw"
+        ]
+    },
+    "1-8": {
+        "境外": 42,
+        "本土": 2,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=QcNPHHjaJVEr-bnW4hG5RQ"
+        ]
+    }
+}

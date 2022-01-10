@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="main.css?20210615">
+  <link rel="stylesheet" href="main.css?20220110">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"></script>
-  <script src="main.js?20210826" defer></script>
+  <script src="main.js?20220110" defer></script>
 </head>
 
 <body>
@@ -83,29 +83,34 @@
       </table>
     </div>
 
-    <h2>近30日確診數</h2>
+    <h2>2022 近日確診數</h2>
     <div class="hori-scroll">
-      <canvas id="myChartLatest"></canvas>
+      <canvas id="myChart2022Latest"></canvas>
     </div>
 
-    <!--最近比較穩定先不渲染-->
+    <!--暫時隱藏-->
     <div style="display: none;">
-      <h2>近日死亡數</h2>
+      <h2>2022 確診數</h2>
       <div class="hori-scroll">
-        <canvas id="myChartDeathLatest"></canvas>
+        <canvas id="myChart2022"></canvas>
       </div>
     </div>
-    
-    <h2>2021/5/11迄今確診統計</h2>
-    <div class="hori-scroll">
-      <canvas id="myChart"></canvas>
+
+    <div class="center">
+      <img src="https://imgcdn.cna.com.tw/www/WebPhotos/800/20220109/2000x1414_001745633604.jpg" style="width:100%; max-width: 650px;">
     </div>
-    
-    <h2>2021/5/11迄今死亡統計</h2>
+    <hr>
+
+    <h2>2021/5/11~2021/12/31確診統計</h2>
     <div class="hori-scroll">
-      <canvas id="myChartDeath"></canvas>
+      <canvas id="myChart2021"></canvas>
     </div>
-    
+
+    <h2>2021/5/11~2021/12/31死亡統計</h2>
+    <div class="hori-scroll">
+      <canvas id="myChartDeath2021"></canvas>
+    </div>
+
     <!--
       <h2>確診趨勢</h2>  
       <div class="hori-scroll">
@@ -117,7 +122,7 @@
         <canvas id="myLineChartDeath"></canvas>
       </div>
     -->
-    
+
     <!--最近比較穩定先不渲染-->
     <div style="display: none;">
       <h2>5/11 至今確診者分佈地區</h2>

@@ -42,7 +42,7 @@ const cityToParty = {
     "連江縣": "國民黨",
 }
 
-fetch('./data/dataset.json')
+fetch('./data/dataset-2021.json')
     .then((res) => {
         return res.json();
     })
@@ -80,83 +80,75 @@ fetch('./data/dataset.json')
             }
         });
 
-        for (let charts = 0; charts < 2; charts++) {
-            let from = 0;
-            let to = labels.length;
-            let latest = "";
-            if (charts == 1) {
-                latest = "Latest";
-                to = labels.length;
-                from = Math.max(0, to - 30);
-            }
-            new Chart(document.getElementById(`myChart${latest}`).getContext('2d'), {
-                type: 'bar',
-                data: {
-                    labels: labels.slice(from, to),
-                    datasets: [{
-                        label: '本土確診',
-                        data: confirmed.slice(from, to),
-                        backgroundColor: 'rgba(0, 166, 255, 0.8)'
-                    }, {
-                        label: '境外移入',
-                        data: confirmedForeign.slice(from, to),
-                        backgroundColor: 'rgba(66, 206, 245, 0.8)'
-                    }, {
-                        label: '校正回歸',
-                        data: backlog.slice(from, to),
-                        backgroundColor: 'rgba(138, 192, 222, 0.8)'
-                    }]
-                },
-                options: {
-                    scales: {
-                        x: {
-                            stacked: true,
-                        },
-                        y: {
-                            stacked: true,
-                            beginAtZero: true,
-                            min: 0,
-                            ticks: {
-                                // forces step size to be 50 units
-                                // stepSize: 100
-                            }
-                        }
+        let from = 0;
+        let to = labels.length;
+        new Chart(document.getElementById(`myChart2021`).getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labels.slice(from, to),
+                datasets: [{
+                    label: '本土確診',
+                    data: confirmed.slice(from, to),
+                    backgroundColor: 'rgba(0, 166, 255, 0.8)'
+                }, {
+                    label: '境外移入',
+                    data: confirmedForeign.slice(from, to),
+                    backgroundColor: 'rgba(66, 206, 245, 0.8)'
+                }, {
+                    label: '校正回歸',
+                    data: backlog.slice(from, to),
+                    backgroundColor: 'rgba(138, 192, 222, 0.8)'
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        stacked: true,
                     },
-                    plugins: {
-                        tooltip: {
-                            callbacks: {
-                                footer: (tooltipItems) => {
-                                    let sum = 0;
-                                    tooltipItems.forEach((tooltipItem) => {
-                                        sum += tooltipItem.parsed.y;
-                                    });
-                                    let d = death[tooltipItems[0].parsed.x];
-                                    return `總合: ${sum}\n死亡: ${d}`;
-                                },
-                            }
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        min: 0,
+                        ticks: {
+                            // forces step size to be 50 units
+                            // stepSize: 100
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            footer: (tooltipItems) => {
+                                let sum = 0;
+                                tooltipItems.forEach((tooltipItem) => {
+                                    sum += tooltipItem.parsed.y;
+                                });
+                                let d = death[tooltipItems[0].parsed.x];
+                                return `總合: ${sum}\n死亡: ${d}`;
+                            },
                         }
                     }
                 }
-            });
+            }
+        });
 
-            new Chart(document.getElementById(`myChartDeath${latest}`).getContext('2d'), {
-                type: 'bar',
-                data: {
-                    labels: labels.slice(from, to),
-                    datasets: [{
-                        label: '死亡人數',
-                        data: death.slice(from, to),
-                        backgroundColor: 'rgba(115, 115, 115, 0.8)'
-                    }]
-                }, options: {
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
+        new Chart(document.getElementById(`myChartDeath2021`).getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labels.slice(from, to),
+                datasets: [{
+                    label: '死亡人數',
+                    data: death.slice(from, to),
+                    backgroundColor: 'rgba(115, 115, 115, 0.8)'
+                }]
+            }, options: {
+                plugins: {
+                    legend: {
+                        display: false
                     }
                 }
-            });
-        }
+            }
+        });
 
         // backlogCounterToList
         let backgroundColorList = [];
@@ -320,7 +312,7 @@ fetch('./data/vaccine.json')
     .then(res => res.json())
     .then(data => {
         document.querySelector('#vaccine-update-date').textContent = `${data.lastModified}`;
-        let sum = { "第一劑": 0, "第二劑": 0, "基礎加強劑": 0, "追加劑": 0};
+        let sum = { "第一劑": 0, "第二劑": 0, "基礎加強劑": 0, "追加劑": 0 };
         Object.keys(data.data).forEach(e => {
             Object.keys(data.data[e]).forEach(f => {
                 sum[f] += Number(data.data[e][f]);
@@ -336,3 +328,103 @@ fetch('./data/vaccine.json')
         document.querySelector(`td[data-vaccine="sum"][data-n="追加劑"]`).innerHTML = `${numberFmt.format(sum['追加劑'])} 人次<br>約占總人口 ${(sum['追加劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
     })
     .catch(err => console.log(err))
+
+// for 2022
+fetch('./data/dataset-2022.json')
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        console.log(data);
+
+        let labels = [];
+        let confirmed = [];                 // 本土單日確診
+        let confirmedForeign = [];          // 境外移入單日確診
+        let backlog = [];                   // 本土單日校正回歸
+        let confirmedAfterBackLog = [];     // 本土單日確診加上之後的校正回歸 (最準確的數字)
+        let death = [];                     // 本土單日死亡數字
+        let backlogCounter = {};            // 本土單日發佈確診加上今日發佈的校正回歸 (不準確的數字)
+        Object.keys(data).forEach(date => {
+            let confirmedToday = data[date]['本土'];
+            let confirmedTodayForeign = data[date]['境外'];
+            let backlogToday = 0;
+            if (data[date]['校正回歸']) {
+                Object.keys(data[date]['校正回歸']).forEach((key) => {
+                    if (typeof backlogCounter[key] === 'undefined') {
+                        backlogCounter[key] = data[date]['校正回歸'][key];
+                    } else {
+                        backlogCounter[key] += data[date]['校正回歸'][key];
+                    }
+                    backlogToday += data[date]['校正回歸'][key];
+                });
+            }
+
+            // push
+            labels.push(date);
+            confirmed.push(confirmedToday);
+            confirmedForeign.push(confirmedTodayForeign);
+            backlog.push(backlogToday);
+            confirmedAfterBackLog.push(confirmedToday + backlogToday);
+            death.push((data[date]['死亡']) ? data[date]['死亡'] : 0);
+        });
+
+        for (let charts = 0; charts < 2; charts++) {
+            let from = 0;
+            let to = labels.length;
+            let latest = "";
+            if (charts == 1) {
+                latest = "Latest";
+                to = labels.length;
+                from = Math.max(0, to - 30);
+            }
+            new Chart(document.getElementById(`myChart2022${latest}`).getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels.slice(from, to),
+                    datasets: [{
+                        label: '本土確診',
+                        data: confirmed.slice(from, to),
+                        backgroundColor: 'rgba(0, 166, 255, 0.8)'
+                    }, {
+                        label: '境外移入',
+                        data: confirmedForeign.slice(from, to),
+                        backgroundColor: 'rgba(66, 206, 245, 0.8)'
+                    }, {
+                        label: '校正回歸',
+                        data: backlog.slice(from, to),
+                        backgroundColor: 'rgba(138, 192, 222, 0.8)'
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            min: 0,
+                            ticks: {
+                                // forces step size to be 50 units
+                                // stepSize: 100
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                footer: (tooltipItems) => {
+                                    let sum = 0;
+                                    tooltipItems.forEach((tooltipItem) => {
+                                        sum += tooltipItem.parsed.y;
+                                    });
+                                    let d = death[tooltipItems[0].parsed.x];
+                                    return `總合: ${sum}\n死亡: ${d}`;
+                                },
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    });

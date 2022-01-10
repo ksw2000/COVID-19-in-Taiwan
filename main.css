@@ -57,7 +57,7 @@ canvas {
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5)
 }
 
-.table-wrap{
+.table-wrap {
   overflow-x: auto;
 }
 
@@ -82,4 +82,9 @@ td, th {
   border: 1px solid var(--mdc-theme-secondary);
   padding: 10px;
   white-space: nowrap;
+}
+
+.center{
+  margin: 0px auto;
+  text-align: center;
 }
