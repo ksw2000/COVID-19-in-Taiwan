@@ -16,6 +16,9 @@ function dateToNumber(date) {
     };
 }
 
+// clear cache, generate a random number string
+const cache = (Math.floor(Math.random() * 1000000)).toString(16);
+
 // party data
 const cityToParty = {
     "基隆市": "民進黨",
@@ -42,7 +45,7 @@ const cityToParty = {
     "連江縣": "國民黨",
 }
 
-fetch('./data/dataset-2021.json')
+fetch('./data/dataset-2021.json?' + cache)
     .then((res) => {
         return res.json();
     })
@@ -201,7 +204,7 @@ fetch('./data/dataset-2021.json')
     });
 
 
-fetch('./data/city_statistic.json')
+fetch('./data/city_statistic.json?' + cache)
     .then(res => res.json())
     .then(data => {
         for (let mode = 0; mode < 2; mode++) {
@@ -298,7 +301,7 @@ fetch('./data/city_statistic.json')
         }
     });
 
-fetch('./data/latest_statistic.json')
+fetch('./data/latest_statistic.json?' + cache)
     .then(res => res.json())
     .then(data => {
         ['確診', '死亡', '昨日確診'].forEach(e => {
@@ -330,7 +333,7 @@ fetch('./data/vaccine.json')
     .catch(err => console.log(err))
 
 // for 2022
-fetch('./data/dataset-2022.json')
+fetch('./data/dataset-2022.json?' + cache)
     .then((res) => {
         return res.json();
     })
