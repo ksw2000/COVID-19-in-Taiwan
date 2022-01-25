@@ -205,5 +205,23 @@
         "url": [
             "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=RpwW0PpibHaRFJpatPM1HA"
         ]
+    },
+    "1-24": {
+        "境外": 36,
+        "本土": 15,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Eg5gZrriSQBA--KxcspeTg"
+        ]
+    },
+    "1-25": {
+        "境外": 25,
+        "本土": 13,
+        "死亡": 0,
+        "校正回歸": {},
+        "url": [
+            "https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Juq0widEV7lcQ05-8Db97g"
+        ]
     }
 }
