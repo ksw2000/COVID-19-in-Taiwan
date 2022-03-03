@@ -1,158 +1,163 @@
 {
-	"lastModified": "20220302-18:08",
+	"lastModified": "20220303-18:07",
 	"dataList": {
 		"from511": [
 			{
 				"city": "新北市",
-				"num": 4860,
-				"proportion": 0.4444850923724163
+				"num": 4861,
+				"proportion": 0.44453589391861
 			},
 			{
 				"city": "台北市",
-				"num": 3221,
-				"proportion": 0.2945856959941467
+				"num": 3218,
+				"proportion": 0.29428440786465476
 			},
 			{
 				"city": "桃園市",
-				"num": 1036,
-				"proportion": 0.09475032010243278
+				"num": 1038,
+				"proportion": 0.09492455418381344
 			},
 			{
 				"city": "基隆市",
 				"num": 306,
-				"proportion": 0.02798609840863362
+				"proportion": 0.027983539094650206
 			},
 			{
 				"city": "高雄市",
 				"num": 279,
-				"proportion": 0.02551673678434242
+				"proportion": 0.02551440329218107
 			},
 			{
 				"city": "彰化縣",
-				"num": 253,
-				"proportion": 0.023138832997987926
+				"num": 254,
+				"proportion": 0.023228166438042982
 			},
 			{
 				"city": "苗栗縣",
 				"num": 224,
-				"proportion": 0.020486555697823303
+				"proportion": 0.020484682213077275
 			},
 			{
 				"city": "台中市",
 				"num": 200,
-				"proportion": 0.018291567587342236
+				"proportion": 0.01828989483310471
 			},
 			{
 				"city": "新竹縣",
 				"num": 105,
-				"proportion": 0.009603072983354673
+				"proportion": 0.009602194787379973
 			},
 			{
 				"city": "宜蘭縣",
 				"num": 104,
-				"proportion": 0.009511615145417962
+				"proportion": 0.009510745313214448
 			},
 			{
 				"city": "花蓮縣",
 				"num": 63,
-				"proportion": 0.005761843790012804
+				"proportion": 0.005761316872427984
 			},
 			{
 				"city": "台南市",
 				"num": 59,
-				"proportion": 0.0053960124382659595
+				"proportion": 0.005395518975765889
 			},
 			{
 				"city": "屏東縣",
 				"num": 51,
-				"proportion": 0.00466434973477227
+				"proportion": 0.004663923182441701
 			},
 			{
 				"city": "新竹市",
 				"num": 45,
-				"proportion": 0.004115602707152003
+				"proportion": 0.00411522633744856
 			},
 			{
 				"city": "南投縣",
 				"num": 34,
-				"proportion": 0.00310956648984818
+				"proportion": 0.003109282121627801
 			},
 			{
 				"city": "嘉義縣",
 				"num": 31,
-				"proportion": 0.0028351929760380467
+				"proportion": 0.00283493369913123
 			},
 			{
 				"city": "台東縣",
 				"num": 22,
-				"proportion": 0.002012072434607646
+				"proportion": 0.002011888431641518
 			},
 			{
 				"city": "雲林縣",
 				"num": 22,
-				"proportion": 0.002012072434607646
+				"proportion": 0.002011888431641518
 			},
 			{
 				"city": "嘉義市",
 				"num": 10,
-				"proportion": 0.0009145783793671117
+				"proportion": 0.0009144947416552355
 			},
 			{
 				"city": "澎湖縣",
 				"num": 5,
-				"proportion": 0.00045728918968355586
+				"proportion": 0.0004572473708276177
 			},
 			{
 				"city": "連江縣",
 				"num": 4,
-				"proportion": 0.0003658313517468447
+				"proportion": 0.0003657978966620942
 			}
 		],
 		"before14": [
 			{
 				"city": "新北市",
-				"num": 38,
-				"proportion": 0.38
+				"num": 35,
+				"proportion": 0.3804347826086957
 			},
 			{
 				"city": "桃園市",
-				"num": 25,
-				"proportion": 0.25
+				"num": 26,
+				"proportion": 0.2826086956521739
 			},
 			{
 				"city": "台北市",
-				"num": 13,
-				"proportion": 0.13
-			},
-			{
-				"city": "高雄市",
-				"num": 7,
-				"proportion": 0.07
+				"num": 11,
+				"proportion": 0.11956521739130435
 			},
 			{
 				"city": "台南市",
-				"num": 7,
-				"proportion": 0.07
+				"num": 6,
+				"proportion": 0.06521739130434782
 			},
 			{
-				"city": "苗栗縣",
-				"num": 4,
-				"proportion": 0.04
+				"city": "高雄市",
+				"num": 5,
+				"proportion": 0.05434782608695652
 			},
 			{
 				"city": "新竹縣",
 				"num": 3,
-				"proportion": 0.03
+				"proportion": 0.03260869565217391
 			},
 			{
 				"city": "宜蘭縣",
 				"num": 2,
-				"proportion": 0.02
+				"proportion": 0.021739130434782608
+			},
+			{
+				"city": "苗栗縣",
+				"num": 2,
+				"proportion": 0.021739130434782608
+			},
+			{
+				"city": "彰化縣",
+				"num": 1,
+				"proportion": 0.010869565217391304
 			},
 			{
 				"city": "台中市",
 				"num": 1,
-				"proportion": 0.01
+				"proportion": 0.010869565217391304
 			}
 		]
 	}
