@@ -333,13 +333,11 @@ fetch('./data/vaccine.json?' + cache)
     .catch(err => console.log(err))
 
 // for 2022
-fetch('./data/dataset-2022.json?' + cache)
+fetch('./data/dataset-robot.json?' + cache)
     .then((res) => {
         return res.json();
     })
     .then((data) => {
-        console.log(data);
-
         let labels = [];
         let confirmed = [];                 // 本土單日確診
         let confirmedForeign = [];          // 境外移入單日確診

@@ -2,6 +2,7 @@ const fs = require('fs');
 const https = require('https');
 const outputFile = './data/dataset-robot.json';
 const rootURL = 'https://www.cdc.gov.tw/Category/NewsPage/EmXemht4IT-IRAPrAnyG9A';
+const threshold = 30;
 
 // 盡可能抓取資料，若有缺就不抓
 function textRecognize(title, text) {
@@ -77,7 +78,7 @@ https.get(rootURL, (res) => {
         }
 
         let jobs = [];
-        for (let i = 0; i < links.length && i < 30; i++) {
+        for (let i = 0; i < links.length && i < threshold; i++) {
             if (links[i].title.match(/^新增/) === null) {
                 continue;
             }
@@ -102,7 +103,9 @@ https.get(rootURL, (res) => {
             }));
         }
         Promise.all(jobs).then((resList) => {
-            output = {};
+            const originalData = fs.readFileSync(outputFile);
+            output = JSON.parse(originalData);
+
             resList.sort((a, b) => {
                 if (a.res == null) return 0;
                 if (b.res == null) return 0;
