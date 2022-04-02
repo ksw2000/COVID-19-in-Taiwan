@@ -96,7 +96,7 @@
         <canvas id="myChart2022"></canvas>
       </div>
     </div>
-    
+
     <hr>
 
     <h2>2021/5/11~2021/12/31確診統計</h2>
@@ -122,30 +122,32 @@
     -->
 
     <!--最近比較穩定先不渲染-->
-    <div style="display: none;">
-      <h2>5/11 至今確診者分佈地區</h2>
-      <p>更新日期：<span id="myPieChart-update-date"></span></p>
-      <div class="hori-scroll">
-        <canvas id="myPieChart" style="width: 500px;"></canvas>
-        <p>依執政黨執政縣市統計</p>
-        <table id="myPieChart-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>中國國民黨</th>
-              <th>台灣民眾黨</th>
-              <th>民主進步黨</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>人數</td>
-              <td data-party="國民黨">-</td>
-              <td data-party="民眾黨">-</td>
-              <td data-party="民進黨">-</td>
-            </tr>
-          </tbody>
-        </table>
+    <div>
+      <div style="display: none;">
+        <h2>5/11 至今確診者分佈地區</h2>
+        <p>更新日期：<span id="myPieChart-update-date"></span></p>
+        <div class="hori-scroll">
+          <canvas id="myPieChart" style="width: 500px;"></canvas>
+          <p>依執政黨執政縣市統計</p>
+          <table id="myPieChart-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>中國國民黨</th>
+                <th>台灣民眾黨</th>
+                <th>民主進步黨</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>人數</td>
+                <td data-party="國民黨">-</td>
+                <td data-party="民眾黨">-</td>
+                <td data-party="民進黨">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <h2>近 14 日確診者分佈地區</h2>
