@@ -871,5 +871,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=6TIhl1yzQB_JidNKF_nE_A"
 		]
+	},
+	"4-10": {
+		"境外": 144,
+		"本土": 431,
+		"死亡": 0,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=ghKztUv_quukRbryMpse6A"
+		]
 	}
 }
