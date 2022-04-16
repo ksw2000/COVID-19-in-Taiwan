@@ -40,16 +40,16 @@ function textRecognize(title, text) {
     index = title.search('分別為');
     if (index != -1) {
         // 同時有本土與境外
-        let res = /(\d+)例本土.*?(\d+)例境外移入/.exec(title.substring(index));
+        let res = /([,\d]+)例本土.*?([,\d]+)例境外移入/.exec(title.substring(index));
         if (res === null) return null;
-        ret['本土'] = Number(res[1]);
-        ret['境外'] = Number(res[2]);
+        ret['本土'] = Number(res[1].replace(',', ''));
+        ret['境外'] = Number(res[2].replace(',', ''));
     } else {
         // 僅有境外
-        let res = /新增(\d+)例.*?境外移入/.exec(title);
+        let res = /新增([,\d]+)例.*?境外移入/.exec(title);
         if (res === null) return null;
         ret['本土'] = 0;
-        ret['境外'] = Number(res[1]);
+        ret['境外'] = Number(res[1].replace(',', ''));
     }
 
     return ret;
