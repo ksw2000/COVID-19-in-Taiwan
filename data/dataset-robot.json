@@ -997,5 +997,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=m7iBUXiqulLtEy-1K-YlqQ"
 		]
+	},
+	"4-24": {
+		"境外": 80,
+		"本土": 5092,
+		"死亡": 0,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=crwRuw-bw4RLXAvbCNiU9A"
+		]
 	}
 }
