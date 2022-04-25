@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "covid-19-in-taiwan",
+  "version": "1.0.0",
+  "description": "A crawler for Covid-19 in Taiwan",
+  "main": "get_data.js",
+  "scripts": {
+    "start": "node get_data.js",
+    "vaccine": "node get_vaccine.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liao2000/COVID-19-in-Taiwan.git"
+  },
+  "author": "ksw2000",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liao2000/COVID-19-in-Taiwan/issues"
+  },
+  "homepage": "https://github.com/liao2000/COVID-19-in-Taiwan#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.3",
+    "pdf2html": "^2.6.6"
+  },
+  "engines": {
+    "node": ">=16.0"
+  }
+}
