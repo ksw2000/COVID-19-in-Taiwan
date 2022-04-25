@@ -27,15 +27,16 @@
     <div style="margin: 20px 0px 10px;">
       <a href="https://github.com/liao2000/COVID-19-in-Taiwan"><img alt="Repository"
           src="https://img.shields.io/badge/@liao2000-COVID--19--in--Taiwan-blue?logo=github&style=flat-square"></a>
-      
+
       <a href="https://github.com/liao2000/COVID-19-in-Taiwan/issues"><img alt="Issue"
           src="https://img.shields.io/github/issues/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
-      
+
       <a href="https://github.com/liao2000/COVID-19-in-Taiwan/blob/main/LICENSE"><img alt="License"
           src="https://img.shields.io/github/license/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
     </div>
     <p class="comment">2022 年數據皆由機器人分析新聞稿抓取，若有誤可以發issue</p>
-    <p><b id="latest-data-single-day-date">2022-#-#</b></p>
+    <h2>最新數據</h2>
+    <p><span id="latest-data-single-day-date"></span></p>
     <div class="table-wrap">
       <table>
         <tr>
@@ -50,15 +51,15 @@
         </tr>
       </table>
     </div>
-    <h2>2022 近日確診數</h2>
+    <h2>近 30 日確診數</h2>
     <div class="hori-scroll">
       <canvas id="myChart2022Latest"></canvas>
     </div>
-    
+
     <h2>疫苗數據</h2>
+    <p>更新日期：<span id="vaccine-update-date"></span></p>
     <div class="table-wrap">
       <table>
-        <p>更新日期：<span id="vaccine-update-date"></span></p>
         <thead>
           <tr>
             <th>#</th>
@@ -106,37 +107,12 @@
       </table>
     </div>
 
-    <!--暫時隱藏-->
-    <div style="display: none;">
+    <div>
       <h2>2022 確診數</h2>
       <div class="hori-scroll">
         <canvas id="myChart2022"></canvas>
       </div>
     </div>
-
-    <hr>
-
-    <h2>2021/5/11~2021/12/31確診統計</h2>
-    <div class="hori-scroll">
-      <canvas id="myChart2021"></canvas>
-    </div>
-
-    <h2>2021/5/11~2021/12/31死亡統計</h2>
-    <div class="hori-scroll">
-      <canvas id="myChartDeath2021"></canvas>
-    </div>
-
-    <!--
-      <h2>確診趨勢</h2>  
-      <div class="hori-scroll">
-        <canvas id="myLineChart"></canvas>
-      </div>
-      
-      <h2>死亡趨勢</h2>
-      <div class="hori-scroll">
-        <canvas id="myLineChartDeath"></canvas>
-      </div>
-    -->
 
     <!--最近比較穩定先不渲染-->
     <div>
@@ -171,7 +147,7 @@
       <p>更新日期：<span id="myPieChart-14-update-date"></span></p>
       <p>不排除康復者及死亡個案，因為找不到資料</p>
       <div class="hori-scroll">
-        <canvas id="myPieChart-14" style="width: 500px;"></canvas>
+        <canvas id="myPieChart-14" style="width: 350px;"></canvas>
         <p>依執政黨執政縣市統計</p>
         <table id="myPieChart-14-table">
           <thead>
@@ -194,7 +170,34 @@
       </div>
     </div>
 
-    <h2>單日發佈確診總數</h2>
+    <div class="center" style="margin:20px 0px;">
+      <iframe
+        src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D2126032004229873%26id%3D470265436473213&show_text=true&width=500"
+        width="500" height="680" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+      <blockquote class="twitter-tweet">
+        <p lang="ja" dir="ltr">
+          【ラブライブ！サンシャイン!!『Aqours』と手洗い！】<br>厚労省は、(株)サンライズと協力し、『ラブライブ！サンシャイン!!』に登場するスクールアイドル、Aqours（アクア）による新型コロナウイルス感染症予防の手洗い推進啓発ポスターを公開しました。<br><br>Ⓒ2017
+          プロジェクトラブライブ！サンシャイン!! <a href="https://t.co/YJ54aJGlcU">pic.twitter.com/YJ54aJGlcU</a></p>&mdash; 厚生労働省
+        (@MHLWitter)
+        <a href="https://twitter.com/MHLWitter/status/1260116549177798656?ref_src=twsrc%5Etfw">May 12, 2020</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <h2>2021 確診統計</h2>
+    <div class="hori-scroll">
+      <canvas id="myChart2021"></canvas>
+    </div>
+
+    <h2>2021 死亡統計</h2>
+    <div class="hori-scroll">
+      <canvas id="myChartDeath2021"></canvas>
+    </div>
+
+    <h2>2021 單日發佈確診總數</h2>
     <p>確診數 + 當日所發佈之校正迴歸數量 (外媒所採用之數據)</p>
     <div class="hori-scroll">
       <canvas id="myChartSingleDay"></canvas>
@@ -218,11 +221,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <hr>
-    <div class="center">
-      <img src="https://i.imgur.com/pubNv6P.gif" style="width: 100%; max-width:1240px;">
     </div>
   </main>
 </body>

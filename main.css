@@ -92,3 +92,8 @@ td, th {
   margin: 0px auto;
   text-align: center;
 }
+
+/*overwrite twitter css*/
+.twitter-tweet{
+  margin: 10px auto;
+}
