@@ -24,10 +24,14 @@ canvas {
   overflow-y: auto;
 }
 
-.cetner {
+.center {
   display: block;
   margin: auto;
   width: 100%;
+}
+
+.comment{
+  color:#595959
 }
 
 :root {

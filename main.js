@@ -7,7 +7,7 @@ const numberFmt = new Intl.NumberFormat('en-US')
 // "5-11" -> 511
 function dateToNumber(date) {
     date = date.split("-");
-    month = Number(date[0]);
+    let month = Number(date[0]);
     date = Number(date[1]);
     return {
         month: month,
@@ -46,10 +46,8 @@ const cityToParty = {
 }
 
 fetch('./data/dataset-2021.json?' + cache)
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
+    .then(res => res.json())
+    .then(data => {
         let labels = [];
         let confirmed = [];                 // 本土單日確診
         let confirmedForeign = [];          // 境外移入單日確診
@@ -208,7 +206,7 @@ fetch('./data/city_statistic.json?' + cache)
     .then(res => res.json())
     .then(data => {
         for (let mode = 0; mode < 2; mode++) {
-            let citys = [];
+            let cities = [];
             let nums = [];
             let proportion = [];
             let numOther = 0;
@@ -219,7 +217,7 @@ fetch('./data/city_statistic.json?' + cache)
             //let parties_num = [];
 
             data.dataList[(mode == 0) ? 'from511' : 'before14'].forEach(e => {
-                party = cityToParty[e.city];
+                let party = cityToParty[e.city];
                 // 有些 city 的 label 超怪，好像是有亂碼吧
                 // 所以要過濾一下
                 if (party) {
@@ -229,18 +227,18 @@ fetch('./data/city_statistic.json?' + cache)
                         parties_num_map[party] = e.num;
                     }
 
-                    if (citys.length >= 7) {
+                    if (cities.length >= 7) {
                         numOther += e.num;
                         proportionOther += e.proportion;
                     } else {
-                        citys.push(e.city);
+                        cities.push(e.city);
                         nums.push(e.num);
                         proportion.push(e.proportion);
                     }
                 }
             });
 
-            citys.push("其他");
+            cities.push("其他");
             nums.push(numOther);
             proportion.push(proportionOther);
 
@@ -250,7 +248,7 @@ fetch('./data/city_statistic.json?' + cache)
                 type: 'pie',
                 plugins: [ChartDataLabels],
                 data: {
-                    labels: citys,
+                    labels: cities,
                     datasets: [{
                         label: '確診縣市',
                         data: nums,
@@ -306,7 +304,7 @@ fetch('./data/latest_statistic.json?' + cache)
     .then(data => {
         ['確診', '死亡', '昨日確診'].forEach(e => {
             let num = numberFmt.format(Number(data[e]));
-            document.querySelector(`td[data-latest-statistic="${e}"]`).textContent = `${num} 人`;
+            document.querySelector(`td[data-statistic="${e}"]`).textContent = `${num} 人`;
         })
     })
     .catch(err => console.log(err))
@@ -324,7 +322,6 @@ fetch('./data/vaccine.json?' + cache)
             });
         });
         const peopleInTaiwan = 23570000; // 大概2357萬
-        console.log(sum);
         document.querySelector(`td[data-vaccine="sum"][data-n="第一劑"]`).innerHTML = `${numberFmt.format(sum['第一劑'])} 人次<br>約占總人口 ${(sum['第一劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
         document.querySelector(`td[data-vaccine="sum"][data-n="第二劑"]`).innerHTML = `${numberFmt.format(sum['第二劑'])} 人次<br>約占總人口 ${(sum['第二劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
         document.querySelector(`td[data-vaccine="sum"][data-n="基礎加強劑"]`).innerHTML = `${numberFmt.format(sum['基礎加強劑'])} 人次`;
@@ -428,4 +425,12 @@ fetch('./data/dataset-robot.json?' + cache)
                 }
             });
         }
+
+        // for latest data (single day)
+        let last = Object.keys(data).length - 1;
+        let lastDate = Object.keys(data)[last];
+        document.querySelector("#latest-data-single-day-date").textContent = `2022/${lastDate.split("-")[0].padStart(2, '0')}/${lastDate.split("-")[1].padStart(2, '0')}`;
+        document.querySelector("td[data-latest-single-day='本土']").textContent = confirmed[last]+"人";
+        document.querySelector("td[data-latest-single-day='境外']").textContent = confirmedForeign[last]+"人";
+        document.querySelector("td[data-latest-single-day='死亡']").textContent = death[last]+"人";
     });

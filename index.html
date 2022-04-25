@@ -24,15 +24,38 @@
   </header>
   <!------------------------------------------>
   <main class="mdc-top-app-bar--fixed-adjust routing-content">
+    <div style="margin: 20px 0px 10px;">
+      <a href="https://github.com/liao2000/COVID-19-in-Taiwan"><img alt="Repository"
+          src="https://img.shields.io/badge/@liao2000-COVID--19--in--Taiwan-blue?logo=github&style=flat-square"></a>
+      
+      <a href="https://github.com/liao2000/COVID-19-in-Taiwan/issues"><img alt="Issue"
+          src="https://img.shields.io/github/issues/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
+      
+      <a href="https://github.com/liao2000/COVID-19-in-Taiwan/blob/main/LICENSE"><img alt="License"
+          src="https://img.shields.io/github/license/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
+    </div>
+    <p class="comment">2022 年數據皆由機器人分析新聞稿抓取，若有誤可以發issue</p>
+    <p><b id="latest-data-single-day-date">2022-#-#</b></p>
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>本土</th>
+          <th>境外</th>
+          <th>死亡</th>
+        </tr>
+        <tr>
+          <td data-latest-single-day="本土">#</td>
+          <td data-latest-single-day="境外">#</td>
+          <td data-latest-single-day="死亡">#</td>
+        </tr>
+      </table>
+    </div>
+    <h2>2022 近日確診數</h2>
+    <div class="hori-scroll">
+      <canvas id="myChart2022Latest"></canvas>
+    </div>
+    
     <h2>疫苗數據</h2>
-    <a href="https://github.com/liao2000/COVID-19-in-Taiwan"><img alt="Repository"
-        src="https://img.shields.io/badge/@liao2000-COVID--19--in--Taiwan-blue?logo=github&style=flat-square"></a>
-
-    <a href="https://github.com/liao2000/COVID-19-in-Taiwan/issues"><img alt="Issue"
-        src="https://img.shields.io/github/issues/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
-
-    <a href="https://github.com/liao2000/COVID-19-in-Taiwan/blob/main/LICENSE"><img alt="License"
-        src="https://img.shields.io/github/license/liao2000/COVID-19-in-Taiwan?style=flat-square"></a>
     <div class="table-wrap">
       <table>
         <p>更新日期：<span id="vaccine-update-date"></span></p>
@@ -81,12 +104,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <h2>2022 近日確診數</h2>
-    <p>2022/3/7日後之數據皆由機器人自動抓取</p>
-    <div class="hori-scroll">
-      <canvas id="myChart2022Latest"></canvas>
     </div>
 
     <!--暫時隱藏-->
@@ -195,9 +212,9 @@
         </thead>
         <tbody>
           <tr>
-            <td data-latest-statistic="確診"></td>
-            <td data-latest-statistic="死亡"></td>
-            <td data-latest-statistic="昨日確診"></td>
+            <td data-statistic="確診"></td>
+            <td data-statistic="死亡"></td>
+            <td data-statistic="昨日確診"></td>
           </tr>
         </tbody>
       </table>
