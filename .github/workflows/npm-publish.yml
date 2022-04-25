@@ -21,6 +21,7 @@ jobs:
 
       - name: Get Data
         run: |
+          cd bot
           npm init
           npm run start
           npm run vaccine
@@ -29,5 +30,5 @@ jobs:
           git config user.email "nodejs-ci@github.com"
           git remote add secure-origin https://${{ secrets.NPM_CI }}@github.com/liao2000/${{ github.event.repository.name }}
           git add .
-          git commit -m "get the latest data from CDC"
+          git commit -m "Get data from CDC"
           git push --force
