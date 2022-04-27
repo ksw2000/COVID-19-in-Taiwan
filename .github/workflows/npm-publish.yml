@@ -25,6 +25,7 @@ jobs:
           npm install
           npm run start
           npm run vaccine
+          cd ../
           git init
           git config user.name  "CI"
           git config user.email "nodejs-ci@github.com"
