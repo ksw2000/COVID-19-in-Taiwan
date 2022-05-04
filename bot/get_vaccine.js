@@ -16,7 +16,7 @@ async function get_vaccine(pdf_url) {
             if (err) {
                 rejects('Conversion error: ' + err);
             }
-            html = html.replace(/\r\n/g, '');
+            html = html.replace(/\r?\n/g, '');
             const re = /<p>(.*?)<\/p>/g;
 
             let output = {};
