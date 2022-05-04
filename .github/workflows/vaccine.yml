@@ -4,10 +4,8 @@
 name: Node.js Package
 
 on:
-  push:
   schedule:
-    # runs at 7:00 UTC every day
-    # i.e., runs at UTC+8 15:00 and UTC+8 19:00 every day
+    # runs at 19:00 UTC+8 every day
     - cron: '0 11 * * *'
 
 jobs:
