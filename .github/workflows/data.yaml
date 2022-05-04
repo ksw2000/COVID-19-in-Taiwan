@@ -5,8 +5,7 @@ name: Node.js Package
 
 on:
   schedule:
-    # runs at 7:00 UTC every day
-    # i.e., runs at UTC+8 15:00 and UTC+8 19:00 every day
+    # runs at UTC+8 15:00 every day
     - cron: '0 7 * * *'
 
 jobs:
