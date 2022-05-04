@@ -4,6 +4,7 @@
 name: Node.js Package
 
 on:
+  push:
   schedule:
     # runs at 7:00 UTC every day
     # i.e., runs at UTC+8 15:00 and UTC+8 19:00 every day
@@ -15,10 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-
+          
       - name: Get Data
         run: |
           cd bot
