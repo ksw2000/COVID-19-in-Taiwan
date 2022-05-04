@@ -21,7 +21,7 @@
   "homepage": "https://github.com/liao2000/COVID-19-in-Taiwan#readme",
   "dependencies": {
     "node-fetch": "^3.2.3",
-    "pdf2html": "^2.6.6"
+    "pdf2html": "^2.6.7"
   },
   "engines": {
     "node": ">=16.0"
