@@ -20,9 +20,10 @@ async function get_vaccine(pdf_url) {
             const re = /<p>(.*?)<\/p>/g;
 
             let output = {};
-            output.lastModified = "2022/--/--";
             output.data = {};
             output.source = source;
+            let date = new Date();
+            output.lastFetched = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
 
             let list = [];
             for (let res = re.exec(html); res != null; res = re.exec(html)) {
