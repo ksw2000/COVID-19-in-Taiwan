@@ -424,6 +424,24 @@ fetch('./data/dataset-robot.json?' + cache)
                     }
                 }
             });
+
+            new Chart(document.getElementById(`myChartDeath2022${latest}`).getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels.slice(from, to),
+                    datasets: [{
+                        label: '死亡人數',
+                        data: death.slice(from, to),
+                        backgroundColor: 'rgba(115, 115, 115, 0.8)'
+                    }]
+                }, options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
         }
 
         // for latest data (single day)
