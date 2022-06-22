@@ -1501,5 +1501,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=OgzXfe0hNpLlWVcBB33Ypw"
 		]
+	},
+	"6-22": {
+		"境外": 33,
+		"本土": 52213,
+		"死亡": 171,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Lz-D0qccEHqrDmogdYWibA"
+		]
 	}
 }
