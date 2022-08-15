@@ -1960,5 +1960,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=zPXtEaUCpJRJuY7mDKkdYw"
 		]
+	},
+	"8-15": {
+		"境外": 196,
+		"本土": 15596,
+		"死亡": 22,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=TDh8rwB_Qd_bYjcQldgDcg"
+		]
 	}
 }
