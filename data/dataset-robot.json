@@ -1969,5 +1969,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=TDh8rwB_Qd_bYjcQldgDcg"
 		]
+	},
+	"8-16": {
+		"境外": 270,
+		"本土": 22902,
+		"死亡": 16,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=MU7-vY5Os4aP-CWlJoMnzg"
+		]
 	}
 }
