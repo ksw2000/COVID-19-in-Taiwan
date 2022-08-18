@@ -1987,5 +1987,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=QF-bglkwII1cohA2VEwtlQ"
 		]
+	},
+	"8-18": {
+		"境外": 337,
+		"本土": 23088,
+		"死亡": 34,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=c4DE2aiEp8f2gYBzziHJZw"
+		]
 	}
 }
