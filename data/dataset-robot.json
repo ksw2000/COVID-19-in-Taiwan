@@ -2014,5 +2014,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=mqDKbp8Yq2njMrpqKS7u5w"
 		]
+	},
+	"8-21": {
+		"境外": 260,
+		"本土": 22137,
+		"死亡": 26,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=Qw5nSxPtWwpXQrnKgxPADg"
+		]
 	}
 }
