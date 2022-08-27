@@ -2068,5 +2068,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=eTKQ8eX0unX4W5RDu_l0TA"
 		]
+	},
+	"8-27": {
+		"境外": 280,
+		"本土": 25621,
+		"死亡": 40,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=de_qPfFiHJy7c1OdlgNQNA"
+		]
 	}
 }
