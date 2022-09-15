@@ -2221,5 +2221,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=PjxMPBzKCHWAMKmMs0x7mQ"
 		]
+	},
+	"9-15": {
+		"境外": 201,
+		"本土": 45269,
+		"死亡": 57,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=3NE3oFt1Rey3utdT4ZxM3Q"
+		]
 	}
 }
