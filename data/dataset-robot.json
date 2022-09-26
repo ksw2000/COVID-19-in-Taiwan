@@ -2320,5 +2320,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=ayAn8RdfW1LCCWEaVDX_uQ"
 		]
+	},
+	"9-26": {
+		"境外": 272,
+		"本土": 28513,
+		"死亡": 56,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=ecDCKSWC73rwELkEL_Kyew"
+		]
 	}
 }
