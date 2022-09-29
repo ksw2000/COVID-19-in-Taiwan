@@ -313,12 +313,12 @@ fetch('./data/vaccine.json?' + cache)
     .then(res => res.json())
     .then(data => {
         document.querySelector('#vaccine-update-date').textContent = `${data.lastModified}`;
-        let sum = { "第一劑": 0, "第二劑": 0, "基礎加強劑": 0, "追加劑": 0 };
+        let sum = { "第一劑": 0, "第二劑": 0, "基礎加強劑": 0, "追加劑": 0 , "第二次追加劑": 0};
         Object.keys(data.data).forEach(e => {
-            Object.keys(data.data[e]).forEach(f => {
-                sum[f] += Number(data.data[e][f]);
-                let num = numberFmt.format(Number(data.data[e][f]));
-                document.querySelector(`td[data-vaccine="${e}"][data-n="${f}"]`).textContent = `${num} 人次`;
+            Object.keys(sum).forEach(f => {
+                let n = isNaN(Number(data.data[e][f])) ? 0 : Number(data.data[e][f]);
+                sum[f] += Number(n);
+                document.querySelector(`td[data-vaccine="${e}"][data-n="${f}"]`).textContent = `${numberFmt.format(n) } 人次`;
             });
         });
         const peopleInTaiwan = 23570000; // 大概2357萬
@@ -326,6 +326,7 @@ fetch('./data/vaccine.json?' + cache)
         document.querySelector(`td[data-vaccine="sum"][data-n="第二劑"]`).innerHTML = `${numberFmt.format(sum['第二劑'])} 人次<br>約占總人口 ${(sum['第二劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
         document.querySelector(`td[data-vaccine="sum"][data-n="基礎加強劑"]`).innerHTML = `${numberFmt.format(sum['基礎加強劑'])} 人次`;
         document.querySelector(`td[data-vaccine="sum"][data-n="追加劑"]`).innerHTML = `${numberFmt.format(sum['追加劑'])} 人次<br>約占總人口 ${(sum['追加劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
+        document.querySelector(`td[data-vaccine="sum"][data-n="第二次追加劑"]`).innerHTML = `${numberFmt.format(sum['第二次追加劑'])} 人次<br>約占總人口 ${(sum['第二次追加劑'] / peopleInTaiwan * 100).toFixed(2)}%`;
     })
     .catch(err => console.log(err))
 

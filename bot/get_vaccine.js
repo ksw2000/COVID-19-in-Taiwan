@@ -30,31 +30,54 @@ async function get_vaccine(pdf_url) {
                 list.push(res[1].trim());
             }
             for (let i = 0; i < list.length; i++) {
-                if (list[i] === 'AstraZeneca') {
-                    output.data.astraZeneca = {};
-                    output.data.astraZeneca.第一劑 = extractNumber(list[i + 1]);
-                    output.data.astraZeneca.第二劑 = extractNumber(list[i + 2]);
-                    output.data.astraZeneca.基礎加強劑 = extractNumber(list[i + 3]);
-                    output.data.astraZeneca.追加劑 = extractNumber(list[i + 4]);
-                } else if (list[i] === 'Moderna') {
-                    output.data.morderna = {};
-                    output.data.morderna.第一劑 = extractNumber(list[i + 1]);
-                    output.data.morderna.第二劑 = extractNumber(list[i + 2]);
-                    output.data.morderna.基礎加強劑 = extractNumber(list[i + 3]);
-                    output.data.morderna.追加劑 = extractNumber(list[i + 4]);
-                } else if (list[i] === '高端') {
-                    output.data.高端 = {};
-                    output.data.高端.第一劑 = extractNumber(list[i + 1]);
-                    output.data.高端.第二劑 = extractNumber(list[i + 2]);
-                    output.data.高端.基礎加強劑 = extractNumber(list[i + 3]);
-                    output.data.高端.追加劑 = extractNumber(list[i + 4]);
-                } else if (list[i] === 'BioNTech') {
-                    output.data.biontech = {};
-                    output.data.biontech.第一劑 = extractNumber(list[i + 1]);
-                    output.data.biontech.第二劑 = extractNumber(list[i + 2]);
-                    output.data.biontech.基礎加強劑 = extractNumber(list[i + 3]);
-                    output.data.biontech.追加劑 = extractNumber(list[i + 4]);
-                    break;
+                switch (list[i]){
+                    case 'AstraZeneca':
+                        output.data.astraZeneca = {};
+                        output.data.astraZeneca.第一劑 = extractNumber(list[i + 1]);
+                        output.data.astraZeneca.第二劑 = extractNumber(list[i + 2]);
+                        output.data.astraZeneca.基礎加強劑 = extractNumber(list[i + 3]);
+                        output.data.astraZeneca.追加劑 = extractNumber(list[i + 4]);
+                        break;
+                    case 'Moderna':
+                        output.data.morderna = {};
+                        console.log(list[i+1]);
+                        output.data.morderna.第一劑 = extractNumber(list[i + 1]);
+                        output.data.morderna.第二劑 = extractNumber(list[i + 2]);
+                        output.data.morderna.基礎加強劑 = extractNumber(list[i + 3]);
+                        output.data.morderna.追加劑 = extractNumber(list[i + 4]);
+                        output.data.morderna.第二次追加劑 = extractNumber(list[i + 5]);
+                        break;
+                    // case 'Moderna 雙價 BA.1':
+                    //     output.data.morderna雙價BA1 = {};
+                    //     console.log(list[i+1]);
+                    //     output.data.morderna雙價BA1.追加劑 = extractNumber(list[i + 1]);
+                    //     output.data.morderna雙價BA1.第二次追加劑 = extractNumber(list[i + 2]);
+                    //     output.data.morderna雙價BA1.第三次追加劑 = extractNumber(list[i + 3]);
+                    //     break;
+                    case '高端':
+                        output.data.高端 = {};
+                        output.data.高端.第一劑 = extractNumber(list[i + 1]);
+                        output.data.高端.第二劑 = extractNumber(list[i + 2]);
+                        output.data.高端.基礎加強劑 = extractNumber(list[i + 3]);
+                        output.data.高端.追加劑 = extractNumber(list[i + 4]);
+                        output.data.高端.第二次追加劑 = extractNumber(list[i + 5]);
+                        break;
+                    case 'BioNTech':
+                        output.data.biontech = {};
+                        output.data.biontech.第一劑 = extractNumber(list[i + 1]);
+                        output.data.biontech.第二劑 = extractNumber(list[i + 2]);
+                        output.data.biontech.基礎加強劑 = extractNumber(list[i + 3]);
+                        output.data.biontech.追加劑 = extractNumber(list[i + 4]);
+                        output.data.biontech.第二次追加劑 = extractNumber(list[i + 5]);
+                        break;
+                    case 'Novavax':
+                        output.data.novavax = {};
+                        output.data.novavax.第一劑 = extractNumber(list[i + 1]);
+                        output.data.novavax.第二劑 = extractNumber(list[i + 2]);
+                        output.data.novavax.基礎加強劑 = extractNumber(list[i + 3]);
+                        output.data.novavax.追加劑 = extractNumber(list[i + 4]);
+                        output.data.novavax.第二次追加劑 = extractNumber(list[i + 5]);
+                        break;
                 }
             }
             for (let j = list.length - 1; j >= 0; j--) {
