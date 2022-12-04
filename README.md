@@ -1,6 +1,6 @@
 # COVID-19-in-Taiwan
 
-![](https://img.shields.io/github/license/liao2000/COVID-19-in-Taiwan?style=flat-square) [![](https://img.shields.io/github/issues/liao2000/COVID-19-in-Taiwan?style=flat-square&color=orange)](https://github.com/liao2000/COVID-19-in-Taiwan/issues) ![](https://img.shields.io/github/stars/liao2000/COVID-19-in-Taiwan?style=flat-square) ![](https://img.shields.io/github/workflow/status/liao2000/COVID-19-in-Taiwan/Node.js%20Package?style=flat-square)
+![](https://img.shields.io/github/license/ksw2000/COVID-19-in-Taiwan?style=flat-square) [![](https://img.shields.io/github/issues/ksw2000/COVID-19-in-Taiwan?style=flat-square&color=orange)](https://github.com/ksw2000/COVID-19-in-Taiwan/issues) ![](https://img.shields.io/github/stars/ksw2000/COVID-19-in-Taiwan?style=flat-square) ![](https://img.shields.io/github/workflow/status/ksw2000/COVID-19-in-Taiwan/Node.js%20Package?style=flat-square)
 
 ![](https://i.imgur.com/yGYcsAw.png)
 
@@ -8,7 +8,7 @@
 
 數據若有錯可以發 issue 或 pull request
 
-[https://liao2000.github.io/COVID-19-in-Taiwan/](https://liao2000.github.io/COVID-19-in-Taiwan/)
+[https://ksw2000.github.io/COVID-19-in-Taiwan/](https://ksw2000.github.io/COVID-19-in-Taiwan/)
 
 ## bot/get_data.js
 
