@@ -3031,5 +3031,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=BRuL-by5GabZK9CIraBdmg"
 		]
+	},
+	"12-16": {
+		"境外": 100,
+		"本土": 15316,
+		"死亡": 24,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=4lm7S30GfZSoO77paBkCpg"
+		]
 	}
 }
