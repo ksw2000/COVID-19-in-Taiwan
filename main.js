@@ -21,14 +21,14 @@ const cache = (Math.floor(Math.random() * 1000000)).toString(16);
 
 // party data
 const cityToParty = {
-    "基隆市": "民進黨",
-    "台北市": "民眾黨",
+    "基隆市": "國民黨",
+    "台北市": "國民黨",
     "新北市": "國民黨",
     "宜蘭縣": "國民黨",
-    "桃園市": "民進黨",
+    "桃園市": "國民黨",
     "新竹縣": "國民黨",
-    "新竹市": "民進黨",
-    "苗栗縣": "國民黨",
+    "新竹市": "民眾黨",
+    "苗栗縣": "無黨籍",
     "台中市": "國民黨",
     "彰化縣": "國民黨",
     "南投縣": "國民黨",
@@ -40,8 +40,8 @@ const cityToParty = {
     "屏東縣": "民進黨",
     "花蓮縣": "國民黨",
     "台東縣": "國民黨",
-    "澎湖縣": "國民黨",
-    "金門縣": "國民黨",
+    "澎湖縣": "民進黨",
+    "金門縣": "無黨籍",
     "連江縣": "國民黨",
 }
 
@@ -292,7 +292,7 @@ fetch('./data/city_statistic.json?' + cache)
                     }
                 }
             });
-            ['國民黨', '民眾黨', '民進黨'].forEach(e => {
+            ['國民黨', '民眾黨', '民進黨', '無黨籍'].forEach(e => {
                 let num = numberFmt.format(Number(parties_num_map[e]));
                 document.querySelector(`#${dom}-table td[data-party="${e}"]`).textContent = `${num} 人`;
             });
