@@ -330,7 +330,7 @@ fetch('./data/vaccine.json?' + cache)
     })
     .catch(err => console.log(err))
 
-// for 2022
+// for 2023
 fetch('./data/dataset-robot.json?' + cache)
     .then((res) => {
         return res.json();
@@ -376,7 +376,7 @@ fetch('./data/dataset-robot.json?' + cache)
                 to = labels.length;
                 from = Math.max(0, to - 30);
             }
-            new Chart(document.getElementById(`myChart2022${latest}`).getContext('2d'), {
+            new Chart(document.getElementById(`myChart2023${latest}`).getContext('2d'), {
                 type: 'bar',
                 data: {
                     labels: labels.slice(from, to),
@@ -426,7 +426,7 @@ fetch('./data/dataset-robot.json?' + cache)
                 }
             });
 
-            new Chart(document.getElementById(`myChartDeath2022${latest}`).getContext('2d'), {
+            new Chart(document.getElementById(`myChartDeath2023${latest}`).getContext('2d'), {
                 type: 'bar',
                 data: {
                     labels: labels.slice(from, to),
@@ -452,4 +452,114 @@ fetch('./data/dataset-robot.json?' + cache)
         document.querySelector("td[data-latest-single-day='本土']").textContent = confirmed[last]+"人";
         document.querySelector("td[data-latest-single-day='境外']").textContent = confirmedForeign[last]+"人";
         document.querySelector("td[data-latest-single-day='死亡']").textContent = death[last]+"人";
+    });
+
+
+// for 2022
+fetch('./data/dataset-robot-2022.json?' + cache)
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        let labels = [];
+        let confirmed = [];                 // 本土單日確診
+        let confirmedForeign = [];          // 境外移入單日確診
+        let backlog = [];                   // 本土單日校正回歸
+        let confirmedAfterBackLog = [];     // 本土單日確診加上之後的校正回歸 (最準確的數字)
+        let death = [];                     // 本土單日死亡數字
+        let backlogCounter = {};            // 本土單日發佈確診加上今日發佈的校正回歸 (不準確的數字)
+        Object.keys(data).forEach(date => {
+            let confirmedToday = data[date]['本土'];
+            let confirmedTodayForeign = data[date]['境外'];
+            let backlogToday = 0;
+            if (data[date]['校正回歸']) {
+                Object.keys(data[date]['校正回歸']).forEach((key) => {
+                    if (typeof backlogCounter[key] === 'undefined') {
+                        backlogCounter[key] = data[date]['校正回歸'][key];
+                    } else {
+                        backlogCounter[key] += data[date]['校正回歸'][key];
+                    }
+                    backlogToday += data[date]['校正回歸'][key];
+                });
+            }
+
+            // push
+            labels.push(date);
+            confirmed.push(confirmedToday);
+            confirmedForeign.push(confirmedTodayForeign);
+            backlog.push(backlogToday);
+            confirmedAfterBackLog.push(confirmedToday + backlogToday);
+            death.push((data[date]['死亡']) ? data[date]['死亡'] : 0);
+        });
+
+        let from = 0;
+        let to = labels.length;
+        let latest = "";
+        new Chart(document.getElementById(`myChart2022`).getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labels.slice(from, to),
+                datasets: [{
+                    label: '本土確診',
+                    data: confirmed.slice(from, to),
+                    backgroundColor: 'rgba(0, 166, 255, 0.8)'
+                }, {
+                    label: '境外移入',
+                    data: confirmedForeign.slice(from, to),
+                    backgroundColor: 'rgba(66, 206, 245, 0.8)'
+                }, {
+                    label: '校正回歸',
+                    data: backlog.slice(from, to),
+                    backgroundColor: 'rgba(138, 192, 222, 0.8)'
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        min: 0,
+                        ticks: {
+                            // forces step size to be 50 units
+                            // stepSize: 100
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            footer: (tooltipItems) => {
+                                let sum = 0;
+                                tooltipItems.forEach((tooltipItem) => {
+                                    sum += tooltipItem.parsed.y;
+                                });
+                                let d = death[tooltipItems[0].parsed.x];
+                                return `總合: ${sum}\n死亡: ${d}`;
+                            },
+                        }
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById(`myChartDeath2022`).getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: labels.slice(from, to),
+                datasets: [{
+                    label: '死亡人數',
+                    data: death.slice(from, to),
+                    backgroundColor: 'rgba(115, 115, 115, 0.8)'
+                }]
+            }, options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
     });

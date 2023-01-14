@@ -54,7 +54,7 @@ fetch(rootURL).then(res => {
                 a.res.date.d - b.res.date.d;
         })
         resList.forEach(job => {
-            if (job.res != null && job.res.date.y === 2022) {
+            if (job.res != null && job.res.date.y === 2023) {
                 let key = `${job.res.date.m}-${job.res.date.d}`;
                 output[key] = {
                     "境外": job.res["境外"],
