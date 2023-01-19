@@ -160,5 +160,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=6njUJyBSbG5VJbdlmgRjFQ"
 		]
+	},
+	"1-19": {
+		"境外": 390,
+		"本土": 18024,
+		"死亡": 48,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=4An7fMfuRTBjCvk0OwcmAw"
+		]
 	}
 }
