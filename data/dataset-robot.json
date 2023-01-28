@@ -241,5 +241,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=YFZGau5SwRP-io8ijaJTCg"
 		]
+	},
+	"1-28": {
+		"境外": 285,
+		"本土": 27159,
+		"死亡": 20,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=fMCaK5FGW-8uoa4EnyeG4A"
+		]
 	}
 }
