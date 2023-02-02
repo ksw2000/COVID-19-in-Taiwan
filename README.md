@@ -1,6 +1,6 @@
 # COVID-19-in-Taiwan
 
-![](https://img.shields.io/github/license/ksw2000/COVID-19-in-Taiwan?style=flat-square) [![](https://img.shields.io/github/issues/ksw2000/COVID-19-in-Taiwan?style=flat-square&color=orange)](https://github.com/ksw2000/COVID-19-in-Taiwan/issues) ![](https://img.shields.io/github/stars/ksw2000/COVID-19-in-Taiwan?style=flat-square) ![](https://img.shields.io/github/actions/workflow/status/ksw2000/COVID-19-in-Taiwan/data.yaml?branch=main&style=flat-square) ![](https://i.imgur.com/yGYcsAw.png)
+![](https://img.shields.io/github/license/ksw2000/COVID-19-in-Taiwan?style=flat-square) [![](https://img.shields.io/github/issues/ksw2000/COVID-19-in-Taiwan?style=flat-square&color=orange)](https://github.com/ksw2000/COVID-19-in-Taiwan/issues) ![](https://img.shields.io/github/stars/ksw2000/COVID-19-in-Taiwan?style=flat-square) ![](https://img.shields.io/github/actions/workflow/status/ksw2000/COVID-19-in-Taiwan/data.yml?branch=main&style=flat-square) ![](https://i.imgur.com/yGYcsAw.png)
 
 臺灣境內近期COVID-19本土確診、境外移入、死亡數據(含校正回歸)、及疫苗施打狀況
 
