@@ -394,5 +394,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=U-bF8oYCyaOlZF_13K2afw"
 		]
+	},
+	"2-14": {
+		"境外": 395,
+		"本土": 20116,
+		"死亡": 36,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=mwZYQyRFw-HUpoNGzH6jmw"
+		]
 	}
 }
