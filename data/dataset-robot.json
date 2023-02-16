@@ -412,5 +412,14 @@
 		"url": [
 			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=sBng6OwSwN8RxFJUT1Q0oQ"
 		]
+	},
+	"2-16": {
+		"境外": 270,
+		"本土": 16477,
+		"死亡": 61,
+		"校正回歸": {},
+		"url": [
+			"https://www.cdc.gov.tw/Category/ListContent/EmXemht4IT-IRAPrAnyG9A?uaid=4q0CcHx28ExpXZGD6Q3NKA"
+		]
 	}
 }
