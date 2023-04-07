@@ -1,5 +1,5 @@
 {
-	"lastModified": "20230406-07:11",
+	"lastModified": "20230407-07:12",
 	"dataList": {
 		"from511": [
 			{
@@ -116,48 +116,48 @@
 		"before14": [
 			{
 				"city": "新北市",
-				"num": 11,
-				"proportion": 0.275
-			},
-			{
-				"city": "高雄市",
-				"num": 9,
-				"proportion": 0.225
-			},
-			{
-				"city": "台北市",
-				"num": 6,
-				"proportion": 0.15
+				"num": 7,
+				"proportion": 0.4117647058823529
 			},
 			{
 				"city": "彰化縣",
-				"num": 3,
-				"proportion": 0.075
+				"num": 2,
+				"proportion": 0.11764705882352941
+			},
+			{
+				"city": "高雄市",
+				"num": 2,
+				"proportion": 0.11764705882352941
 			},
 			{
 				"city": "新竹縣",
-				"num": 3,
-				"proportion": 0.075
+				"num": 1,
+				"proportion": 0.058823529411764705
 			},
 			{
 				"city": "新竹市",
-				"num": 3,
-				"proportion": 0.075
-			},
-			{
-				"city": "台南市",
-				"num": 2,
-				"proportion": 0.05
-			},
-			{
-				"city": "台中市",
-				"num": 2,
-				"proportion": 0.05
+				"num": 1,
+				"proportion": 0.058823529411764705
 			},
 			{
 				"city": "雲林縣",
 				"num": 1,
-				"proportion": 0.025
+				"proportion": 0.058823529411764705
+			},
+			{
+				"city": "台北市",
+				"num": 1,
+				"proportion": 0.058823529411764705
+			},
+			{
+				"city": "台南市",
+				"num": 1,
+				"proportion": 0.058823529411764705
+			},
+			{
+				"city": "台中市",
+				"num": 1,
+				"proportion": 0.058823529411764705
 			}
 		]
 	}
